@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinanceManager.CardAccountPage"
+             Title="CardAccountPage">
+    <NavigationPage.BackButtonTitle/>
+    <ScrollView>
+        <VerticalStackLayout>
+            
+            <VerticalStackLayout x:Name="BancAccountVertStack"></VerticalStackLayout>
+
+            <HorizontalStackLayout HorizontalOptions="Center" >
+
+                <Label x:Name="accountIDLabel"
+                       Margin="20"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+
+                <Label x:Name="accounValueLabel"
+                       HorizontalOptions="Center"
+                       Margin="20"
+                       VerticalOptions="Center"/>
+
+                <Button Background="DarkRed"
+                        TextColor="WhiteSmoke"
+                        Text="add"
+                        Margin="20"
+                        HorizontalOptions="Center"
+                        x:Name="addStatBtn"
+                        Clicked="addStatBtn_Clicked"/>
+
+            </HorizontalStackLayout>
+
+            <VerticalStackLayout x:Name=" StatVertStack"></VerticalStackLayout>
+        
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

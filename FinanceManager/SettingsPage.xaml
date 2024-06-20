@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinanceManager.SettingsPage"
+             Title="SettingsPage">
+    <HorizontalStackLayout
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        Padding="20">
+
+        <Switch x:Name="PasswordSwitch"
+                Toggled="PasswordSwitch_Toggled"
+                Margin="20"/>
+
+        <Label Text="Password"
+               Margin="20"
+               VerticalTextAlignment="Center"
+                />
+
+
+    </HorizontalStackLayout>
+</ContentPage>

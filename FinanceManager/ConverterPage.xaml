@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinanceManager.ConverterPage"
+             Title="ConverterPage">
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <HorizontalStackLayout Margin="20" HorizontalOptions="Center">
+            <Label x:Name="DayLabel" Text="Load" HorizontalOptions="Center"/>
+
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Margin="20">
+
+            <Picker x:Name="FirstPicker" Background="DarkRed" SelectedIndexChanged="FirstPicker_SelectedIndexChanged" WidthRequest="100">
+                    <Picker.ItemsSource>
+                        <x:Array x:Name="AbbreviationArray" Type="{x:Type x:String}">
+                          <!--<x:String>BYN</x:String>
+                          <x:String>USD</x:String>
+                          <x:String>RUB</x:String>
+                          <x:String>EUR</x:String>
+                          <x:String>PLN</x:String>
+                          <x:String>CNY</x:String>-->
+                        </x:Array>
+                    </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="for" VerticalOptions="Center" Margin="20,0,20,0"/>
+
+            <Picker x:Name="SecondPicker" Background="DarkRed" SelectedIndexChanged="SecondPicker_SelectedIndexChanged" WidthRequest="100">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                          <!--<x:String>BYN</x:String>
+                          <x:String>USD</x:String>
+                          <x:String>RUB</x:String>
+                          <x:String>EUR</x:String>
+                          <x:String>PLN</x:String>
+                          <x:String>CNY</x:String>-->
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Padding="0,-10,0,0" HorizontalOptions="Center">
+            <Label x:Name="CurLabelTo" Text="1" HorizontalOptions="Center"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Padding="0,0,0,-10" HorizontalOptions="Center">
+            <Label x:Name="CurLabelFrom" Text="2" HorizontalOptions="Center"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="20">
+            <Entry x:Name="FirstEntry" Background="DarkRed" WidthRequest="100" TextChanged= "FirstEntry_TextChanged"  />
+            <Label Text="for" VerticalOptions="Center" Margin="20,0,20,0"/>
+            <Entry x:Name="SecondEntry" Background="DarkRed" WidthRequest="100" TextChanged= "SecondEntry_TextChanged"/>
+        </HorizontalStackLayout>
+
+        
+    </VerticalStackLayout>
+</ContentPage>

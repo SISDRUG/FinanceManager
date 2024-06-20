@@ -1,0 +1,89 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = FinanceManager
+build_property.ProjectDir = /Users/sisdrug/Desktop/FinanceManager/FinanceManager/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[/Users/sisdrug/Desktop/FinanceManager/FinanceManager/AddOperationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.AddOperationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = AddOperationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = AddOperationPage.xaml
+
+[/Users/sisdrug/Desktop/FinanceManager/FinanceManager/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[/Users/sisdrug/Desktop/FinanceManager/FinanceManager/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[/Users/sisdrug/Desktop/FinanceManager/FinanceManager/AuthorisationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.AuthorisationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = AuthorisationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = AuthorisationPage.xaml
+
+[/Users/sisdrug/Desktop/FinanceManager/FinanceManager/CardAccountPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.CardAccountPage.xaml
+build_metadata.AdditionalFiles.TargetPath = CardAccountPage.xaml
+build_metadata.AdditionalFiles.RelativePath = CardAccountPage.xaml
+
+[/Users/sisdrug/Desktop/FinanceManager/FinanceManager/ConverterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.ConverterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ConverterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ConverterPage.xaml
+
+[/Users/sisdrug/Desktop/FinanceManager/FinanceManager/GeneratingAccountPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.GeneratingAccountPage.xaml
+build_metadata.AdditionalFiles.TargetPath = GeneratingAccountPage.xaml
+build_metadata.AdditionalFiles.RelativePath = GeneratingAccountPage.xaml
+
+[/Users/sisdrug/Desktop/FinanceManager/FinanceManager/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[/Users/sisdrug/Desktop/FinanceManager/FinanceManager/ReportsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.ReportsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ReportsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ReportsPage.xaml
+
+[/Users/sisdrug/Desktop/FinanceManager/FinanceManager/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
+
+[/Users/sisdrug/Desktop/FinanceManager/FinanceManager/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
+
+[/Users/sisdrug/Desktop/FinanceManager/FinanceManager/SettingsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.SettingsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = SettingsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = SettingsPage.xaml
