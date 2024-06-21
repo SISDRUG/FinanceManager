@@ -21,7 +21,7 @@ namespace FinanceManager
         public int AccountID { get; set; }
         public string Operation { get; set; }
         public string Type { get; set; }
-        public int Value { get; set; }
+        public Single Value { get; set; }
     }
 
     public class AppSettings
@@ -74,7 +74,10 @@ namespace FinanceManager
         }
 
 
-
+        public Task<List<TodoItem>> GetItemByIdAsync(int id)
+        {
+            return _database.Table<TodoItem>().Where(i => i.ID == id).ToListAsync();
+        }
 
         public Task<List<TodoItem>> GetItemsAsync()
         {

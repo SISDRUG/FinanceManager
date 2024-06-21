@@ -1,1 +1,1 @@
--v --force --timestamp=none --sign - --entitlements /Users/sisdrug/Desktop/FinanceManager/FinanceManager/obj/Debug/net8.0-maccatalyst/maccatalyst-x64/Entitlements.xcent /Users/sisdrug/Desktop/FinanceManager/FinanceManager/bin/Debug/net8.0-maccatalyst/maccatalyst-x64/FinanceManager.app
+-v --force --timestamp=none --sign - --entitlements /Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/obj/Debug/net8.0-maccatalyst/maccatalyst-x64/Entitlements.xcent /Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/bin/Debug/net8.0-maccatalyst/maccatalyst-x64/FinanceManager.app

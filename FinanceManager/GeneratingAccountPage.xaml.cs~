@@ -1,0 +1,18 @@
+﻿using Microsoft.Maui.Controls;
+
+namespace FinanceManager;
+
+public partial class GeneratingAccountPage : ContentPage
+{
+    public static class Constants
+    {
+        public const string DatabaseFilename = "TodoSQLite.db3";
+        public static string DatabasePath => Path.Combine(FileSystem.AppDataDirectory, DatabaseFilename);
+    }
+
+    public GeneratingAccountPage()
+    {
+        InitializeComponent();
+
+    }
+}

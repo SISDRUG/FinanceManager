@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gaPky12m/n7fZkw2I/7SEW9k/aqXCPtamAG7W00L6uZ4d7qJjY0Xw4j0bc0js2rTfaVw0FTZ/6+c4bZVPDLOMQ==",
+  "dgSpecHash": "k/78+1H5B2PDHvaomCvclYgjgDTut5j9MAbr3Q9qTeYKCn9IS3Lmg3DPoPMkunkcrY+hKlIL0EqBjTfEJoXjig==",
   "success": true,
-  "projectFilePath": "/Users/sisdrug/Desktop/FinanceManager/FinanceManager/FinanceManager.csproj",
+  "projectFilePath": "/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/FinanceManager.csproj",
   "expectedPackageFiles": [
     "/Users/sisdrug/.nuget/packages/googlegson/2.10.1.4/googlegson.2.10.1.4.nupkg.sha512",
     "/Users/sisdrug/.nuget/packages/microsoft.extensions.configuration/8.0.0/microsoft.extensions.configuration.8.0.0.nupkg.sha512",

@@ -5,6 +5,8 @@ obj/Debug/net8.0-android/resizetizer/r/mipmap-hdpi/appicon_foreground.png
 obj/Debug/net8.0-android/resizetizer/r/mipmap-hdpi/appicon.png
 obj/Debug/net8.0-android/resizetizer/r/mipmap-hdpi/appicon_background.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/card.png
+obj/Debug/net8.0-android/resizetizer/r/drawable/creditcard.png
+obj/Debug/net8.0-android/resizetizer/r/drawable/cash.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/fasupport.png
 obj/Debug/net8.0-android/resizetizer/r/mipmap-xxxhdpi/appicon_foreground.png
 obj/Debug/net8.0-android/resizetizer/r/mipmap-xxxhdpi/appicon.png

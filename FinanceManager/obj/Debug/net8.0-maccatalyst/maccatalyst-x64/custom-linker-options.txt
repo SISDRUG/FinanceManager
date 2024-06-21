@@ -5,7 +5,7 @@ AreAnyAssembliesTrimmed=false
 				AOTOutputDirectory=obj/Debug/net8.0-maccatalyst/maccatalyst-x64/nativelibraries/aot-output/
 				DedupAssembly=obj/Debug/net8.0-maccatalyst/maccatalyst-x64/aot-instances.dll
 				AppBundleManifestPath=bin/Debug/net8.0-maccatalyst/maccatalyst-x64/FinanceManager.app/Contents/Info.plist
-				CacheDirectory=/Users/sisdrug/Desktop/FinanceManager/FinanceManager/obj/Debug/net8.0-maccatalyst/maccatalyst-x64/linker-cache
+				CacheDirectory=/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/obj/Debug/net8.0-maccatalyst/maccatalyst-x64/linker-cache
 				
 				Debug=true
 				DeploymentTarget=13.1
@@ -185,7 +185,7 @@ FrameworkAssembly=System.Private.CoreLib
 				IntermediateLinkDir=obj/Debug/net8.0-maccatalyst/maccatalyst-x64/linked/
 				InvariantGlobalization=false
 				HybridGlobalization=false
-				ItemsDirectory=/Users/sisdrug/Desktop/FinanceManager/FinanceManager/obj/Debug/net8.0-maccatalyst/maccatalyst-x64/linker-items
+				ItemsDirectory=/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/obj/Debug/net8.0-maccatalyst/maccatalyst-x64/linker-items
 				IsAppExtension=false
 				IsSimulatorBuild=False
 				LibMonoLinkMode=static

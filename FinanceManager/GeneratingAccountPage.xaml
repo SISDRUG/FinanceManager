@@ -3,64 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinanceManager.GeneratingAccountPage"
              Title="GeneratingAccountPage">
+    <VerticalStackLayout>
+        <Image x:Name="TypeImage" Source="card.png" WidthRequest="400" HeightRequest="400"/>
+        <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Label Text="Type of accont" VerticalOptions="Center" Margin="0,0,10,0"/>
+
+        <Picker x:Name="TypePicker" SelectedIndexChanged="TypePicker_SelectedIndexChanged" Background="DarkRed" WidthRequest="100">
+                    <Picker.ItemsSource>
+                        <x:Array x:Name="TypeArray" Type="{x:Type x:String}">
+                            <x:String>DebitCard</x:String>
+                            <x:String>Cash</x:String>
+                            <x:String>CreditCard</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+            </Picker>
 
 
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="0,10,0,0" VerticalOptions="Center" HorizontalOptions="Center">
+            <Label Text="Start value" VerticalOptions="Center" Margin="0,0,35,0"/>
+            <Entry x:Name="StartValueEntry" TextChanged="StartValueEntry_TextChanged" Background="DarkRed" WidthRequest="100"/>
+        </HorizontalStackLayout>
 
-
-        <CarouselView x:Name="CarouselTest" ItemsSource="{Binding Test}">
-            <CarouselView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout>
-                        <Frame HasShadow="True"
-                               BorderColor="DarkGray"
-                               CornerRadius="5"
-                               Margin="20"
-                               HeightRequest="300"
-                               HorizontalOptions="Center"
-                               VerticalOptions="CenterAndExpand">
-                            <StackLayout>
-                                <Label Text="{Binding Name}"
-                                       FontAttributes="Bold"
-                                       FontSize="18"
-                                       HorizontalOptions="Center"
-                                       VerticalOptions="Center" />
-                                <Image Source="{Binding ImageUrl}"
-                                       Aspect="AspectFill"
-                                       HeightRequest="150"
-                                       WidthRequest="150"
-                                       HorizontalOptions="Center" />
-                                <Label Text="{Binding Location}"
-                                       HorizontalOptions="Center" />
-                                <Label Text="{Binding Details}"
-                                       FontAttributes="Italic"
-                                       HorizontalOptions="Center"
-                                       MaxLines="5"
-                                       LineBreakMode="TailTruncation" />
-                            </StackLayout>
-                        </Frame>
-                    </StackLayout>
-                </DataTemplate>
-            </CarouselView.ItemTemplate>
-        </CarouselView>
-
-
-
-
-        <!--<CarouselView x:Name="CarouselOfAccounts" IndicatorView="indicatorView">
-            <CarouselView.ItemsSource>
-
-
-            </CarouselView.ItemsSource>
-            <CarouselView.ItemTemplate>
-                <DataTemplate>
-                
-                    
-                </DataTemplate>
-            </CarouselView.ItemTemplate>
-        </CarouselView>-->
-   <!--     <IndicatorView x:Name="indicatorView"
-                   IndicatorColor="Gray"
-                   SelectedIndicatorColor="DarkRed"
-                   HorizontalOptions="Center" />
-    </VerticalStackLayout>-->
+        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="0,10,0,0">
+            <Button x:Name="CancleButton" Text="Cancle" Clicked="CancleButton_Clicked" TextColor="WhiteSmoke" Background="DarkRed" Margin="0,0,10,0"/>
+            <Button x:Name="addButton" Clicked="addButton_Clicked" Text="Add" TextColor="WhiteSmoke" Background="DarkRed"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
 </ContentPage>

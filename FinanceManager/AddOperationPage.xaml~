@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinanceManager.AddOperationPage"
+             Title="AddOperationPage">
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label
+                Text="Value"
+                VerticalOptions="Center"
+                Margin="0,0,10,0"
+                />
+
+            <Entry
+                Background="DarkRed"
+                x:Name="ValueEntry"
+                Placeholder="Input value"
+                />
+
+        </HorizontalStackLayout>
+        <HorizontalStackLayout x:Name="HozStack" HorizontalOptions="Center">
+            <Label x:Name="accounIDLabel" IsVisible="false"/>
+            <Label
+                Margin="0,10,16,10"
+                VerticalOptions="Center"
+                Text="Type"
+                />
+
+            <Picker x:Name="PikerType"
+                    Margin="0,10,0,10"
+                    WidthRequest="100"
+                    Background="DarkRed">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+                
+
+        </HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Button Background="DarkRed" TextColor="WhiteSmoke" Text ="cancle" x:Name="CancleButton" Clicked="CancleButton_Clicked" Margin="0,0,20,0"/>
+            <Button Background="DarkRed" TextColor="WhiteSmoke" Text="add" x:Name="AddButton" Clicked="AddButton_Clicked"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

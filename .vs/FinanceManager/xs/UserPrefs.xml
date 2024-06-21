@@ -1,0 +1,62 @@
+﻿<Properties StartupConfiguration="{BA89801D-3F82-46CF-B11C-92AE56432EC7}|Default">
+  <MonoDevelop.Ide.ItemProperties.FinanceManager PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FinanceManager/Platforms/MacCatalyst/Info.plist">
+    <Files>
+      <File FileName="FinanceManager/ConverterPage.xaml.cs" />
+      <File FileName="FinanceManager/GeneratingAccountPage.xaml.cs" />
+      <File FileName="FinanceManager/GeneratingAccountPage.xaml" />
+      <File FileName="FinanceManager/MainPage.xaml.cs" />
+      <File FileName="FinanceManager/ReportsPage.xaml.cs" />
+      <File FileName="FinanceManager/CardAccountPage.xaml" />
+      <File FileName="FinanceManager/CardAccountPage.xaml.cs" />
+      <File FileName="FinanceManager/sqlite.cs" />
+      <File FileName="FinanceManager/Platforms/iOS/Program.cs" />
+      <File FileName="FinanceManager/AddOperationPage.xaml.cs" />
+      <File FileName="FinanceManager/Resources/Styles/Colors.xaml" />
+      <File FileName="FinanceManager/Platforms/iOS/Info.plist" />
+      <File FileName="FinanceManager/Platforms/MacCatalyst/Info.plist" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FinanceManager">
+            <Node name="FinanceManager">
+              <Node name="Platforms" expanded="True" />
+              <Node name="ConverterPage.xaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>accountsStats</Value>
+          <Value>accountID</Value>
+          <Value>item</Value>
+          <Value>accounts</Value>
+          <Value>stats</Value>
+          <Value>password</Value>
+          <Value>PikerType</Value>
+          <Value>firstValue</Value>
+          <Value>fromRate</Value>
+          <Value>response</Value>
+          <Value>data</Value>
+          <Value>rates</Value>
+          <Value>content</Value>
+          <Value>Cur</Value>
+          <Value>__newExchangeRates</Value>
+          <Value>__exchangeRates</Value>
+          <Value>fromRate</Value>
+          <Value>toRate</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="34.0.0-rc.1.432" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

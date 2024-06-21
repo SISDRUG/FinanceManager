@@ -30821,11 +30821,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/sisdrug/Desktop/FinanceManager/FinanceManager/FinanceManager.csproj",
+      "projectUniqueName": "/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/FinanceManager.csproj",
       "projectName": "FinanceManager",
-      "projectPath": "/Users/sisdrug/Desktop/FinanceManager/FinanceManager/FinanceManager.csproj",
+      "projectPath": "/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/FinanceManager.csproj",
       "packagesPath": "/Users/sisdrug/.nuget/packages/",
-      "outputPath": "/Users/sisdrug/Desktop/FinanceManager/FinanceManager/obj/",
+      "outputPath": "/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/obj/",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "configFilePaths": [

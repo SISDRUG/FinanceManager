@@ -7,9 +7,9 @@
       <dSYMSourcePathExists>false</dSYMSourcePathExists>
       <NoSymbolStrip>true</NoSymbolStrip>
       <dSYMInfoPlistRelativePath>FinanceManager.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
-      <SymbolFile>/Users/sisdrug/Desktop/FinanceManager/FinanceManager/obj/Debug/net8.0-ios/iossimulator-x64/mtouch-symbols.list</SymbolFile>
+      <SymbolFile>/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/obj/Debug/net8.0-ios/iossimulator-x64/mtouch-symbols.list</SymbolFile>
       <DSymName>FinanceManager.app.dSYM</DSymName>
-      <SourceProjectPath>/Users/sisdrug/Desktop/FinanceManager/FinanceManager</SourceProjectPath>
+      <SourceProjectPath>/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager</SourceProjectPath>
     </_PostProcessingItem>
   </ItemGroup>
 </Project>

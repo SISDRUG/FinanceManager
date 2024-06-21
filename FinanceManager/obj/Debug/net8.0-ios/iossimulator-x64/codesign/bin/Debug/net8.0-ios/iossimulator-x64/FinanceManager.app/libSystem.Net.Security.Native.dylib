@@ -1,1 +1,1 @@
--v --force --timestamp=none --sign - /Users/sisdrug/Desktop/FinanceManager/FinanceManager/bin/Debug/net8.0-ios/iossimulator-x64/FinanceManager.app/libSystem.Net.Security.Native.dylib
+-v --force --timestamp=none --sign - /Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/bin/Debug/net8.0-ios/iossimulator-x64/FinanceManager.app/libSystem.Net.Security.Native.dylib

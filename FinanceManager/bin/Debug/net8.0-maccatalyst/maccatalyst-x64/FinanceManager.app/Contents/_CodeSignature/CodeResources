@@ -16,6 +16,14 @@
 		<data>
 		mbqMyytDAUtT6kY3hJkb6VUdIj4=
 		</data>
+		<key>Resources/Images/cash.png</key>
+		<data>
+		BUH8KXiNhNzdt0nuh/EiP/ktNDk=
+		</data>
+		<key>Resources/Images/creditcard.png</key>
+		<data>
+		+wiVQNFVbtYWnSWnaQpo90OQe0Q=
+		</data>
 		<key>Resources/Images/fasupport.png</key>
 		<data>
 		vQ5bNSjBI8LPHHuiJXGgJaWG3Ww=
@@ -44,6 +52,14 @@
 		<data>
 		mbqMyytDAUtT6kY3hJkb6VUdIj4=
 		</data>
+		<key>Resources/cash.png</key>
+		<data>
+		BUH8KXiNhNzdt0nuh/EiP/ktNDk=
+		</data>
+		<key>Resources/creditcard.png</key>
+		<data>
+		+wiVQNFVbtYWnSWnaQpo90OQe0Q=
+		</data>
 		<key>Resources/dotnet_bot.png</key>
 		<data>
 		9/GfVa6KCp9St3wOB2IR4/4b7ME=
@@ -67,14 +83,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DxHm69Fez2h8x5q9rFbLSk870+mmdVcDbgsx73u2kWU=
+			yb/m7ij/DcPt1d1mCvyPsmSfgTgsXCZwH8Q6HZtmEpo=
 			</data>
 		</dict>
 		<key>MonoBundle/FinanceManager.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HhPoMhc7Sus315MwavMmMB1kyzPQBvbI6zTqHX2V+rc=
+			tOvhKz1fo5kM7JkTZZ7KzPFi6f0D6mI42B2LJwqKlQU=
 			</data>
 		</dict>
 		<key>MonoBundle/Microsoft.CSharp.dll</key>
@@ -1736,6 +1752,20 @@
 			pVg+xNTamrxgJZZHmWIQKGvXs4O7mqwPypZGWKNo7LA=
 			</data>
 		</dict>
+		<key>Resources/Images/cash.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			i1WecBZe9gKsk5TqmxrINu6vMIvQ39hgNUfqgneAW84=
+			</data>
+		</dict>
+		<key>Resources/Images/creditcard.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			P/RlAda45h58v+xM9GbN2BQgT+ZqZacZNRbn9BiBK0o=
+			</data>
+		</dict>
 		<key>Resources/Images/fasupport.png</key>
 		<dict>
 			<key>hash2</key>
@@ -1783,6 +1813,20 @@
 			<key>hash2</key>
 			<data>
 			pVg+xNTamrxgJZZHmWIQKGvXs4O7mqwPypZGWKNo7LA=
+			</data>
+		</dict>
+		<key>Resources/cash.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			i1WecBZe9gKsk5TqmxrINu6vMIvQ39hgNUfqgneAW84=
+			</data>
+		</dict>
+		<key>Resources/creditcard.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			P/RlAda45h58v+xM9GbN2BQgT+ZqZacZNRbn9BiBK0o=
 			</data>
 		</dict>
 		<key>Resources/dotnet_bot.png</key>

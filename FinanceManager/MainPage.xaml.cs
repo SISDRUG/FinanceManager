@@ -23,7 +23,6 @@ public partial class MainPage : ContentPage
 
         InitializeComponent();
         ShowLoginPage();
-        CreateFrames();
 
     }
 
@@ -34,6 +33,13 @@ public partial class MainPage : ContentPage
         {
             await Navigation.PushModalAsync(new AuthorisationPage());
         }
+    }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        // Ваш код для обновления данных или логики
+        CreateFrames();
     }
 
 
@@ -55,6 +61,7 @@ public partial class MainPage : ContentPage
 
     private async Task CreateFrames()
     {
+        VertStack.Children.Clear();
         var database = new Database(Constants.DatabasePath);
         var frames = new List<Frame>();
         var accounts = await database.GetItemsAsync();
@@ -129,7 +136,7 @@ public partial class MainPage : ContentPage
 
     private async void AddButton_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushModalAsync(new GeneratingAccountPage());
+        await Navigation.PushAsync(new GeneratingAccountPage() { Title = "New Account"});
     }
 
 

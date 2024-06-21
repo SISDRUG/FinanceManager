@@ -8,6 +8,8 @@ public partial class CardAccountPage : ContentPage
         public static string DatabasePath => Path.Combine(FileSystem.AppDataDirectory, DatabaseFilename);
     }
 
+
+    private Database database = new Database(Constants.DatabasePath);
     List<StackLayout> stackLayoutCollection = new List<StackLayout>();
 
     public CardAccountPage(TodoItem account)
@@ -23,15 +25,12 @@ public partial class CardAccountPage : ContentPage
             Margin = new Thickness(0,20,0,200),
         };
 
-        Image cardImg = new Image { Source = account.Source };
+        Image cardImg = new Image { Source = account.Source, HeightRequest = 400};
 
         currentStackLayout.Children.Add(cardImg);
         //currentFrame.Content.InsertLogicalChild(1,accountIDLabel);
 
-        BancAccountVertStack.Children.Add(currentStackLayout);
-
-        ShowStats(account.ID);
-        
+        BancAccountVertStack.Children.Add(currentStackLayout);        
 
 
     }
@@ -52,7 +51,7 @@ public partial class CardAccountPage : ContentPage
         var accountsStats = await database.GetAccountStatsByIdAsync(accountID);
         var stackLayouts = new List<StackLayout>();
         int statsCount = accountsStats.Count;
-        int total = 0;
+        Single total = 0;
         for (int i = 0; i < statsCount; i++)
         {
             var stat = accountsStats[i]; // Локальная переменная для аккаунта
@@ -104,5 +103,17 @@ public partial class CardAccountPage : ContentPage
         
         
         
+    }
+
+    async void DeletAccountButton_Clicked(System.Object sender, System.EventArgs e)
+    {
+        var thisAccount = await database.GetItemByIdAsync(int.Parse(accountIDLabel.Text));
+        await database.DeleteItemAsync(thisAccount[0]);
+        var thisAccountOperations = await database.GetAccountStatsByIdAsync(int.Parse(accountIDLabel.Text));
+        foreach (var operation in thisAccountOperations)
+        {
+            await database.DeleteItemAsync(operation);
+        }
+        await Navigation.PopAsync();
     }
 }
