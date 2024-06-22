@@ -41,12 +41,16 @@ public partial class ReportsPage : ContentPage
             {
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.Center,
+                Background = Colors.DarkRed,
+                MaximumHeightRequest = 100,
+                Margin = new Thickness(0,10,0,10),
                 Padding = 10,
                 HeightRequest = 100,
             };
             Label lb = new Label
             {
-                Text = ("id" + operation.AccountID.ToString() + " value " + operation.Value + " operation " + operation.Operation)
+                HorizontalOptions = LayoutOptions.Center,
+                Text = ("id" + operation.AccountID.ToString() + " value " + operation.Value + " operation " + operation.Operation +"  " + operation.date.ToShortDateString())
             };
 
             stackLayout.Children.Add(lb);

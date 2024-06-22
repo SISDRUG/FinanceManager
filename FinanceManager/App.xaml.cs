@@ -33,7 +33,8 @@ public class MyTabbedPage : TabbedPage
         this.Padding = 20;
 
         // Добавление дочерних страниц
-        Children.Add(new MainPage() { Title = "Главная"});
+        Children.Add(new MainPage() { Title = "Главная" });
+        Children.Add(new AccountsPage() { Title = "Счета"});
         Children.Add(new ReportsPage() { Title = "Отчет"});
         Children.Add(new ConverterPage() { Title = "Конвертер" });
         Children.Add(new SettingsPage() { Title = "Настройки"});

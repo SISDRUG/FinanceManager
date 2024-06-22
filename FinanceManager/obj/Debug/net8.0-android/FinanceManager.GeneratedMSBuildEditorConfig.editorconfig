@@ -16,6 +16,18 @@ build_property.ProjectDir = /Users/sisdrug/Desktop/FinanceManagerRep/FinanceMana
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
+[/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/AboutOperationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.AboutOperationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = AboutOperationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = AboutOperationPage.xaml
+
+[/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/AccountsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.AccountsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = AccountsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = AccountsPage.xaml
+
 [/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/AddOperationPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.AddOperationPage.xaml
@@ -87,3 +99,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.SettingsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = SettingsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = SettingsPage.xaml
+
+[/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/TakeOperationsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.TakeOperationsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = TakeOperationsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = TakeOperationsPage.xaml

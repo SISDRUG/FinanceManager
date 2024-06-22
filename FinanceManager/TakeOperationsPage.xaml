@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinanceManager.TakeOperationsPage"
+             Title="TakeOperationsPage">
+    <VerticalStackLayout HorizontalOptions="Center" Margin="60">
+
+            <Image x:Name="AccountImage"
+                   Source="card.png"
+                   HeightRequest="300"/>
+
+            <Label
+                x:Name="NameLabel"
+                Text="name"
+                VerticalOptions="Center"
+                WidthRequest="300"
+                Margin="0,0,0,30"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
+                FontSize="29"
+                />
+
+            <Label
+                Text="Сумма"
+                VerticalOptions="Center"
+                WidthRequest="300"
+                Margin="20"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
+                TextTransform="Uppercase"
+                FontSize="20"
+                />
+
+            <Entry
+                Background="DarkRed"
+                x:Name="ValueEntry"
+                TextChanged="ValueEntry_TextChanged"
+                Placeholder="Введите сумму"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                WidthRequest="300"
+                />
+
+            <Label x:Name="accounIDLabel"
+                   IsVisible="false"
+                   />
+
+            <Label
+                Margin="20"
+                Text="Type"
+                VerticalOptions="Center"
+                WidthRequest="300"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
+                TextTransform="Uppercase"
+                FontSize="20"
+                />
+
+            <Picker x:Name="PikerType"
+                    Margin="0,10,0,10"
+                    WidthRequest="300"
+                    HorizontalOptions="Center"
+                    Background="DarkRed"
+                    HorizontalTextAlignment="Center">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label
+                Margin="20"
+                Text="Выберите дату"
+                VerticalOptions="Center"
+                WidthRequest="300"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
+                TextTransform="Uppercase"
+                FontSize="20"
+                />
+
+            <DatePicker x:Name="DatePiker" HorizontalOptions="Center" />
+
+            <Label
+                Margin="20"
+                Text="Добавить Описание"
+                VerticalOptions="Center"
+                WidthRequest="300"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
+                TextTransform="Uppercase"
+                FontSize="20"
+                />
+
+            <Frame MaximumHeightRequest="300">
+                <Frame.Content>
+                        <Editor x:Name="DescriptionEditor" Placeholder="Введите описание" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" MinimumHeightRequest="30" AutoSize="TextChanges"/>
+                </Frame.Content>
+            </Frame>
+
+        <HorizontalStackLayout VerticalOptions="End" HorizontalOptions="Center" Margin="20">
+            
+            <Button Background="DarkRed" Text="отменить" x:Name="CancleButton" Clicked="CancleButton_Clicked" TextTransform="Uppercase" FontAttributes="Bold" FontSize="20" TextColor="WhiteSmoke" Margin="0,0,50,0"/>
+            <Button Background="Green"  Text="Списать" x:Name="AddButton" Clicked="AddButton_Clicked" TextTransform="Uppercase" FontAttributes="Bold" FontSize="20" TextColor="WhiteSmoke"/>
+        </HorizontalStackLayout>
+        
+    </VerticalStackLayout>
+</ContentPage>

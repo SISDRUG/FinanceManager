@@ -10,14 +10,15 @@ public partial class AddOperationPage : ContentPage
         public static string DatabasePath => Path.Combine(FileSystem.AppDataDirectory, DatabaseFilename);
     }
 
+    private Database _database = new Database(Constants.DatabasePath);
+
     public AddOperationPage(string cardId)
     {
         InitializeComponent();
         accounIDLabel.Text = cardId;
         GeneratePickerList();
+        InitializeInformation(cardId);
 
-
-        
     }
 
 
@@ -36,12 +37,35 @@ public partial class AddOperationPage : ContentPage
         PikerType.SelectedIndex = 0;
     }
 
+    async Task InitializeInformation(string CardId)
+    {
+        var account = await _database.GetAccountByIdAsync(int.Parse(CardId));
+        AccountImage.Source = account.Source;
+        NameLabel.Text = account.Name;
+
+    }
+
 
     async void AddButton_Clicked(System.Object sender, System.EventArgs e)
     {
         var database = new Database(Constants.DatabasePath);
+        DateTime chosedDate;
+        if (DatePiker.Date == DateTime.Today)
+        {
+            chosedDate = DateTime.Now;
+        }
+        else
+        {
+            chosedDate = DatePiker.Date;
+        }
+
+        if (DescriptionEditor.Text == null || DescriptionEditor.Text == "" )
+        {
+            DescriptionEditor.Text = "Отсутствует";
+        }
+
         Single.TryParse(ValueEntry.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out Single value);
-        var operation = new AccountStats { AccountID = Convert.ToInt32(accounIDLabel.Text) , Value = value, Operation = PikerType.SelectedItem?.ToString() ?? "noType" };
+        var operation = new AccountStats { AccountID = Convert.ToInt32(accounIDLabel.Text) , Value = value, Operation = PikerType.SelectedItem?.ToString() ?? "noType" ,Description = DescriptionEditor.Text , Type = "income", date = chosedDate };
         await database.SaveItemAsync(operation);
         await Navigation.PopAsync();
     }

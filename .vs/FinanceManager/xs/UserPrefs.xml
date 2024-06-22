@@ -1,32 +1,22 @@
 ﻿<Properties StartupConfiguration="{BA89801D-3F82-46CF-B11C-92AE56432EC7}|Default">
-  <MonoDevelop.Ide.ItemProperties.FinanceManager PreferredExecutionTarget="MyAppleMacCatalystID" />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FinanceManager/Platforms/MacCatalyst/Info.plist">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FinanceManager/MainPage.xaml">
     <Files>
-      <File FileName="FinanceManager/ConverterPage.xaml.cs" />
-      <File FileName="FinanceManager/GeneratingAccountPage.xaml.cs" />
-      <File FileName="FinanceManager/GeneratingAccountPage.xaml" />
-      <File FileName="FinanceManager/MainPage.xaml.cs" />
-      <File FileName="FinanceManager/ReportsPage.xaml.cs" />
-      <File FileName="FinanceManager/CardAccountPage.xaml" />
-      <File FileName="FinanceManager/CardAccountPage.xaml.cs" />
-      <File FileName="FinanceManager/sqlite.cs" />
-      <File FileName="FinanceManager/Platforms/iOS/Program.cs" />
-      <File FileName="FinanceManager/AddOperationPage.xaml.cs" />
-      <File FileName="FinanceManager/Resources/Styles/Colors.xaml" />
-      <File FileName="FinanceManager/Platforms/iOS/Info.plist" />
-      <File FileName="FinanceManager/Platforms/MacCatalyst/Info.plist" />
+      <File FileName="FinanceManager/App.xaml.cs" />
+      <File FileName="FinanceManager/AppShell.xaml" Line="10" Column="18" />
+      <File FileName="FinanceManager/MainPage.xaml" Line="50" Column="49" />
+      <File FileName="FinanceManager/MainPage.xaml.cs" Line="100" Column="75" />
+      <File FileName="FinanceManager/sqlite.cs" Line="57" Column="15" />
+      <File FileName="FinanceManager/ReportsPage.xaml.cs" Line="20" Column="5" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="FinanceManager">
+          <Node name="FinanceManager" expanded="True">
             <Node name="FinanceManager">
-              <Node name="Platforms" expanded="True" />
-              <Node name="ConverterPage.xaml" expanded="True" />
+              <Node name="App.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" selected="True" />
+              <Node name="ReportsPage.xaml" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -51,12 +41,19 @@
           <Value>__exchangeRates</Value>
           <Value>fromRate</Value>
           <Value>toRate</Value>
+          <Value>This</Value>
+          <Value>todayOperations</Value>
+          <Value>__database</Value>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="34.0.0-rc.1.432" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.FinanceManager Xamarin.HotReload.DebuggerTimeoutException.FinanceManager.HideInfoBar="True" PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="34.0.0-rc.1.432" />
 </Properties>

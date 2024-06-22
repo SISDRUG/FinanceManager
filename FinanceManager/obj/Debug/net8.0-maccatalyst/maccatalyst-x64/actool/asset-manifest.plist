@@ -6,9 +6,9 @@
 	<dict>
 		<key>output-files</key>
 		<array>
-			<string>/Users/sisdrug/Desktop/FinanceManager/FinanceManager/obj/Debug/net8.0-maccatalyst/maccatalyst-x64/actool/bundle/Assets.car</string>
-			<string>/Users/sisdrug/Desktop/FinanceManager/FinanceManager/obj/Debug/net8.0-maccatalyst/maccatalyst-x64/actool/bundle/appicon.icns</string>
-			<string>/Users/sisdrug/Desktop/FinanceManager/FinanceManager/obj/Debug/net8.0-maccatalyst/maccatalyst-x64/actool/partial-info.plist</string>
+			<string>/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/obj/Debug/net8.0-maccatalyst/maccatalyst-x64/actool/bundle/Assets.car</string>
+			<string>/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/obj/Debug/net8.0-maccatalyst/maccatalyst-x64/actool/bundle/appicon.icns</string>
+			<string>/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/obj/Debug/net8.0-maccatalyst/maccatalyst-x64/actool/partial-info.plist</string>
 		</array>
 	</dict>
 </dict>

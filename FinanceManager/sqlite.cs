@@ -11,6 +11,7 @@ namespace FinanceManager
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
         public string Source { get; set; }
+        public string Name { get; set; }
 
     }
 
@@ -21,7 +22,9 @@ namespace FinanceManager
         public int AccountID { get; set; }
         public string Operation { get; set; }
         public string Type { get; set; }
+        public string Description { get; set; }
         public Single Value { get; set; }
+        public DateTime date { get; set; }
     }
 
     public class AppSettings
@@ -51,6 +54,20 @@ namespace FinanceManager
             settings.Password = password;
 
             await _database.InsertOrReplaceAsync(settings);
+        }
+
+        public async Task<TodoItem> GetAccountByIdAsync(int id)
+        {
+            return await _database.Table<TodoItem>().Where(i => i.ID == id).FirstOrDefaultAsync();
+        }
+
+        public Task<List<AccountStats>> GetAccountStatsByShortStringDate(DateTime dateTime)
+        {
+
+            var sortestats = _database.Table<AccountStats>().Where(i=>i.date.ToShortDateString().Equals(dateTime.ToShortDateString()));
+            var tt = sortestats.ToListAsync();
+
+            return tt;
         }
 
         public async Task<bool> GetShowLoginPageAsync()

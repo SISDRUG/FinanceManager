@@ -3,46 +3,106 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinanceManager.AddOperationPage"
              Title="AddOperationPage">
-    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
-        <HorizontalStackLayout HorizontalOptions="Center">
+    <VerticalStackLayout HorizontalOptions="Center" Margin="60">
+
+            <Image x:Name="AccountImage"
+                   Source="card.png"
+                   HeightRequest="300"/>
+
             <Label
-                Text="Ammount"
+                x:Name="NameLabel"
+                Text="name"
                 VerticalOptions="Center"
-                Margin="0,0,10,0"
+                WidthRequest="300"
+                Margin="0,0,0,30"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
+                FontSize="29"
+                />
+
+            <Label
+                Text="Сумма"
+                VerticalOptions="Center"
+                WidthRequest="300"
+                Margin="20"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
+                TextTransform="Uppercase"
+                FontSize="20"
                 />
 
             <Entry
                 Background="DarkRed"
                 x:Name="ValueEntry"
                 TextChanged="ValueEntry_TextChanged"
-                Placeholder="Input value"
+                Placeholder="Введите сумму"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                WidthRequest="300"
                 />
 
-        </HorizontalStackLayout>
-        <HorizontalStackLayout x:Name="HozStack" HorizontalOptions="Center">
-            <Label x:Name="accounIDLabel" IsVisible="false"/>
+            <Label x:Name="accounIDLabel"
+                   IsVisible="false"
+                   />
+
             <Label
-                Margin="0,10,16,10"
-                VerticalOptions="Center"
+                Margin="20"
                 Text="Type"
+                VerticalOptions="Center"
+                WidthRequest="300"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
+                TextTransform="Uppercase"
+                FontSize="20"
                 />
 
             <Picker x:Name="PikerType"
                     Margin="0,10,0,10"
-                    WidthRequest="100"
-                    Background="DarkRed">
+                    WidthRequest="300"
+                    HorizontalOptions="Center"
+                    Background="DarkRed"
+                    HorizontalTextAlignment="Center">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
-
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
-                
 
+            <Label
+                Margin="20"
+                Text="Выберите дату"
+                VerticalOptions="Center"
+                WidthRequest="300"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
+                TextTransform="Uppercase"
+                FontSize="20"
+                />
+
+            <DatePicker x:Name="DatePiker" HorizontalOptions="Center" />
+
+            <Label
+                Margin="20"
+                Text="Добавить Описание"
+                VerticalOptions="Center"
+                WidthRequest="300"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
+                TextTransform="Uppercase"
+                FontSize="20"
+                />
+
+            <Frame MaximumHeightRequest="300">
+                <Frame.Content>
+                        <Editor x:Name="DescriptionEditor" Placeholder="Введите описание" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" MinimumHeightRequest="30" AutoSize="TextChanges"/>
+                </Frame.Content>
+            </Frame>
+
+        <HorizontalStackLayout VerticalOptions="End" HorizontalOptions="Center" Margin="20">
+            
+            <Button Background="DarkRed" Text="отменить" x:Name="CancleButton" Clicked="CancleButton_Clicked" TextTransform="Uppercase" FontAttributes="Bold" FontSize="20" TextColor="WhiteSmoke" Margin="0,0,50,0"/>
+            <Button Background="Green"  Text="зачислить" x:Name="AddButton" Clicked="AddButton_Clicked" TextTransform="Uppercase" FontAttributes="Bold" FontSize="20" TextColor="WhiteSmoke"/>
         </HorizontalStackLayout>
-        <HorizontalStackLayout HorizontalOptions="Center">
-            <Button Background="DarkRed" TextColor="WhiteSmoke" Text ="cancle" x:Name="CancleButton" Clicked="CancleButton_Clicked" Margin="0,0,20,0"/>
-            <Button Background="DarkRed" TextColor="WhiteSmoke" Text="add" x:Name="AddButton" Clicked="AddButton_Clicked"/>
-        </HorizontalStackLayout>
+        
     </VerticalStackLayout>
 </ContentPage>

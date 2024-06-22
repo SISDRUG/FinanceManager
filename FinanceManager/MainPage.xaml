@@ -3,13 +3,56 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinanceManager.MainPage"
              Title="MainPage">
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="20"
-                Padding="30,0"
-                VerticalOptions="Center"
-                x:Name="VertStack">
-        
-        </VerticalStackLayout>
-    </ScrollView>
+    <VerticalStackLayout Margin="0,20">
+        <HorizontalStackLayout Margin="0,60,0,0" Padding="0" HorizontalOptions="Center">
+            <Label Text="Транзакции за сегодня" HorizontalOptions="Center" FontSize="25"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="0,10" Padding="0" HorizontalOptions="Center">
+            <Label x:Name="DataLabel" Text="Дата на сегодня" HorizontalOptions="Center" FontSize="17"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center">
+
+            <VerticalStackLayout x:Name="VStackIncome"  VerticalOptions="End" WidthRequest="180">
+            <Label x:Name="IncomeLabel" Text="Income" HorizontalOptions="Start" TextColor="Green" FontSize="24"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout x:Name="VStackTotal" WidthRequest="200" Margin="0,20,0,60">
+            <Label x:Name="TotalLabel" Text="Total" HorizontalOptions="Center"  TextColor="Green" FontSize="24"/>
+            </VerticalStackLayout>
+
+
+            <VerticalStackLayout x:Name="VStackOutcome" VerticalOptions="End" WidthRequest="180">
+            <Label x:Name="OutcomeLabel" Text="OutCome" HorizontalOptions="End" TextColor="Red" FontSize="24"/>
+            </VerticalStackLayout>
+
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout HorizontalOptions="Center" Margin="20">
+            <ProgressBar x:Name="PBar" HorizontalOptions="Center"  WidthRequest="580" BackgroundColor="Red" ProgressColor="Green" Progress="0.5" />
+        </HorizontalStackLayout>
+        <ScrollView HeightRequest="800">
+            <VerticalStackLayout HorizontalOptions="Center" x:Name="VStackTodayOperations">
+                <!--<Label Text="Сегодня операций еще не было"/>-->
+
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <HorizontalStackLayout HorizontalOptions="Center" Margin="5,40">
+
+            <VerticalStackLayout WidthRequest="300">
+
+                <Button HorizontalOptions="Center" BackgroundColor="Green" TextColor="WhiteSmoke" Text="Зачислить" FontSize="20"/>
+
+            </VerticalStackLayout>
+
+            <VerticalStackLayout WidthRequest="300">
+
+                <Button HorizontalOptions="Center" BackgroundColor="DarkRed" TextColor="WhiteSmoke" Text="Списать" FontSize="20"/>
+
+            </VerticalStackLayout>
+
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+
 </ContentPage>

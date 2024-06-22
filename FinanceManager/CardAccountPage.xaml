@@ -4,7 +4,6 @@
              x:Class="FinanceManager.CardAccountPage"
              Title="CardAccountPage">
     <NavigationPage.BackButtonTitle/>
-    <ScrollView>
         <VerticalStackLayout>
             
             <VerticalStackLayout x:Name="BancAccountVertStack"></VerticalStackLayout>
@@ -21,13 +20,30 @@
                        Margin="20"
                        VerticalOptions="Center"/>
 
-                <Button Background="DarkRed"
+                
+
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="Center">
+
+                <Button Background="Green"
                         TextColor="WhiteSmoke"
-                        Text="add"
+                        Text="Зачислить"
                         Margin="20"
                         HorizontalOptions="Center"
                         x:Name="addStatBtn"
                         Clicked="addStatBtn_Clicked"/>
+
+                <Button Background="DarkRed"
+                        TextColor="WhiteSmoke"
+                        Text="Списать"
+                        Margin="20"
+                        HorizontalOptions="Center"
+                        x:Name="takeStatBtn"
+                        Clicked="takeStatBtn_Clicked"/>
+                
+
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="Center">
 
                 <Button Background="DarkRed"
                         TextColor="WhiteSmoke"
@@ -39,8 +55,14 @@
 
             </HorizontalStackLayout>
 
-            <VerticalStackLayout x:Name=" StatVertStack"></VerticalStackLayout>
-        
+
+        <ScrollView HeightRequest="600">
+            <VerticalStackLayout HorizontalOptions="Center" x:Name="StatVertStack">
+
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+
         </VerticalStackLayout>
-    </ScrollView>
 </ContentPage>

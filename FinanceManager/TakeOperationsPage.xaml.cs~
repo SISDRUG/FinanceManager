@@ -1,0 +1,9 @@
+﻿namespace FinanceManager;
+
+public partial class TakeOperationsPage : ContentPage
+{
+    public TakeOperationsPage(string cardId)
+    {
+        InitializeComponent();
+    }
+}

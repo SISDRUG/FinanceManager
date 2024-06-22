@@ -8,8 +8,11 @@
     Title="FinanceManager">
 
     <ShellContent
-        Title="Home"
-        
+        Title="Accounts"
+        ContentTemplate="{DataTemplate local:AccountsPage}"
+        Route="AccountPage" />
+    <ShellContent
+        Title="Main"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
     <ShellContent
@@ -46,6 +49,16 @@
         Title="Converter"
         ContentTemplate="{DataTemplate local:ConverterPage}"
         Route="ConverterPage"
+        />
+    <ShellContent
+        Title="TakeOperation"
+        ContentTemplate="{DataTemplate local:TakeOperationsPage}"
+        Route="TakeOperationsPage"
+        />
+    <ShellContent
+        Title="AboutOperation"
+        ContentTemplate="{DataTemplate local:AboutOperationPage}"
+        Route="AboutOperationPage"
         />
 
 

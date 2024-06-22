@@ -10,7 +10,6 @@ public partial class CardAccountPage : ContentPage
 
 
     private Database database = new Database(Constants.DatabasePath);
-    List<StackLayout> stackLayoutCollection = new List<StackLayout>();
 
     public CardAccountPage(TodoItem account)
     {
@@ -84,15 +83,21 @@ public partial class CardAccountPage : ContentPage
 
             stackLayout.Children.Add(lb);
             stackLayout.Children.Add(deletButton);
-            stackLayouts.Add(stackLayout);
+            var frame = new Frame
+            {
+                BorderColor = Colors.DarkRed,
+                Content = stackLayout,
+                WidthRequest = 500,
+                Margin = new Thickness(0, 10, 0, 10),
+                Padding = 10,
+                HeightRequest = 100,
+            };
+
+            StatVertStack.Children.Add(frame);
         }
 
         accounValueLabel.Text = total.ToString();
 
-        foreach (var stackLayout in stackLayouts)
-        {
-            StatVertStack.Children.Add(stackLayout);
-        }
     }
 
 
@@ -115,5 +120,11 @@ public partial class CardAccountPage : ContentPage
             await database.DeleteItemAsync(operation);
         }
         await Navigation.PopAsync();
+    }
+
+    async void takeStatBtn_Clicked(System.Object sender, System.EventArgs e)
+    {
+        await Navigation.PushAsync(new TakeOperationsPage(accountIDLabel.Text));
+
     }
 }
