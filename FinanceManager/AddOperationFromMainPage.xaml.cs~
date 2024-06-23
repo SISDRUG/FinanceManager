@@ -1,0 +1,17 @@
+﻿namespace FinanceManager;
+
+public partial class AddOperationFromMainPage : ContentPage
+{
+    public static class Constants
+    {
+        public const string DatabaseFilename = "TodoSQLite.db3";
+        public static string DatabasePath => Path.Combine(FileSystem.AppDataDirectory, DatabaseFilename);
+    }
+
+    private Database _database = new Database(Constants.DatabasePath);
+
+    public AddOperationFromMainPage()
+    {
+        InitializeComponent();
+    }
+}

@@ -56,6 +56,11 @@ namespace FinanceManager
             await _database.InsertOrReplaceAsync(settings);
         }
 
+        public Task<List<TodoItem>> GetAccountsAsync()
+        {
+            return _database.Table<TodoItem>().ToListAsync();
+        }
+
         public async Task<TodoItem> GetAccountByIdAsync(int id)
         {
             return await _database.Table<TodoItem>().Where(i => i.ID == id).FirstOrDefaultAsync();

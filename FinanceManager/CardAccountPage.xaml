@@ -8,27 +8,30 @@
             
             <VerticalStackLayout x:Name="BancAccountVertStack"></VerticalStackLayout>
 
-            <HorizontalStackLayout HorizontalOptions="Center" >
-
-                <Label x:Name="accountIDLabel"
-                       Margin="20"
+            <VerticalStackLayout HorizontalOptions="Center" >
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label x:Name="accountName"
+                       Margin="5"
                        HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
                        VerticalOptions="Center"/>
-
+            </HorizontalStackLayout>
+                <Label x:Name="accountIDLabel" IsVisible="false"/>
+            <HorizontalStackLayout>
                 <Label x:Name="accounValueLabel"
                        HorizontalOptions="Center"
-                       Margin="20"
+                       Margin="5"
                        VerticalOptions="Center"/>
-
+            </HorizontalStackLayout>
                 
 
-            </HorizontalStackLayout>
+            </VerticalStackLayout>
             <HorizontalStackLayout HorizontalOptions="Center">
 
                 <Button Background="Green"
                         TextColor="WhiteSmoke"
                         Text="Зачислить"
-                        Margin="20"
+                        Margin="5"
                         HorizontalOptions="Center"
                         x:Name="addStatBtn"
                         Clicked="addStatBtn_Clicked"/>
@@ -36,7 +39,7 @@
                 <Button Background="DarkRed"
                         TextColor="WhiteSmoke"
                         Text="Списать"
-                        Margin="20"
+                        Margin="5"
                         HorizontalOptions="Center"
                         x:Name="takeStatBtn"
                         Clicked="takeStatBtn_Clicked"/>
@@ -47,16 +50,16 @@
 
                 <Button Background="DarkRed"
                         TextColor="WhiteSmoke"
-                        Text="DeletAccount"
+                        Text="Удалить счет"
                         HorizontalOptions="Center"
-                        Margin="20"
+                        Margin="5"
                         x:Name="DeletAccountButton"
                         Clicked="DeletAccountButton_Clicked"/>
 
             </HorizontalStackLayout>
 
 
-        <ScrollView HeightRequest="600">
+        <ScrollView HeightRequest="500">
             <VerticalStackLayout HorizontalOptions="Center" x:Name="StatVertStack">
 
 

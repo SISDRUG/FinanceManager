@@ -38,7 +38,6 @@ public partial class ConverterPage : ContentPage
     public ConverterPage()
     {
         InitializeComponent();
-        SecondEntry.TextColor = Colors.WhiteSmoke;
         GetExchangeRatesAsync();
         DayLabel.Text = DateTime.Now.ToLongDateString();
     }
@@ -117,7 +116,6 @@ public partial class ConverterPage : ContentPage
                         
                         Single convertedValue = (firstValue * fromRate) / toRate;
                         SecondEntry.Text = convertedValue.ToString("0.##", CultureInfo.InvariantCulture);
-                        SecondEntry.TextColor = Colors.WhiteSmoke;
                     }
                 }
             }
@@ -175,16 +173,12 @@ public partial class ConverterPage : ContentPage
         if (!_secondPickerFlag)
         {
             _firstPickerFlag = true;
-            CurLabelFirst.Text = FirstPicker.SelectedItem?.ToString();
             string fromCurrency = FirstPicker.SelectedItem?.ToString();
             string toCurrency = SecondPicker.SelectedItem?.ToString();
             string curTo = ((_exchangeRates[fromCurrency]) / (_exchangeRates[toCurrency] / _exchangeScale[toCurrency])).ToString("F2");
             string curFrom = ((_exchangeRates[toCurrency]) / (_exchangeRates[fromCurrency] / _exchangeScale[fromCurrency])).ToString("F2");
-            CurLabelTo.Text = curTo;
-            //CurLabelTo.Text = _exchangeScale[fromCurrency] + fromCurrency + " -- " + curTo + " -> " + toCurrency;
-            //CurLabelFrom.Text = fromCurrency + " <- " + curFrom + " -- " + _exchangeScale[toCurrency] + toCurrency;
-
-            CurLabelFrom.Text = curFrom;
+            CurLabelTo.Text = _exchangeScale[fromCurrency] + fromCurrency + " -- " + curTo + " -> " + toCurrency;
+            CurLabelFrom.Text =fromCurrency + " <- " + curFrom + " -- " + _exchangeScale[toCurrency] +toCurrency;
             _firstPickerFlag = false;
         }
     }
@@ -194,7 +188,6 @@ public partial class ConverterPage : ContentPage
         if (!_firstPickerFlag)
         {
             _secondPickerFlag = true;
-            CurLabelSecond.Text = SecondPicker.SelectedItem?.ToString();
             string fromCurrency = FirstPicker.SelectedItem?.ToString();
             string toCurrency = SecondPicker.SelectedItem?.ToString();
             string curTo = ((_exchangeRates[fromCurrency]) / (_exchangeRates[toCurrency] / _exchangeScale[toCurrency])).ToString("F2");

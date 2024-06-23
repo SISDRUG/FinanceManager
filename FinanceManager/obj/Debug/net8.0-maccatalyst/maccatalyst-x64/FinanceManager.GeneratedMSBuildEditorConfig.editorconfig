@@ -28,6 +28,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.AccountsPag
 build_metadata.AdditionalFiles.TargetPath = AccountsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = AccountsPage.xaml
 
+[/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/AddOperationFromMainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.AddOperationFromMainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = AddOperationFromMainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = AddOperationFromMainPage.xaml
+
 [/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/AddOperationPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.AddOperationPage.xaml
@@ -99,6 +105,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.SettingsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = SettingsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = SettingsPage.xaml
+
+[/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/TakeOperationFromMainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceManager.TakeOperationFromMainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = TakeOperationFromMainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = TakeOperationFromMainPage.xaml
 
 [/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/TakeOperationsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

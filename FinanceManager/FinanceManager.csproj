@@ -76,6 +76,7 @@
 	  <None Remove="Resources\Raw\appSettings.json" />
 	  <None Remove="Resources\Images\creditcard.png" />
 	  <None Remove="Resources\Images\cash.png" />
+	  <None Remove="Resources\Images\arrows.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\fasupport.png" />
@@ -83,6 +84,7 @@
 	  <BundleResource Include="Resources\Images\card.png" />
 	  <BundleResource Include="Resources\Images\creditcard.png" />
 	  <BundleResource Include="Resources\Images\cash.png" />
+	  <BundleResource Include="Resources\Images\arrows.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Models\" />

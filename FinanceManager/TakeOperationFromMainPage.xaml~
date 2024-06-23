@@ -1,24 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FinanceManager.TakeOperationsPage"
-             Title="TakeOperationsPage">
+             x:Class="FinanceManager.TakeOperationFromMainPage"
+             Title="TakeOperationFromMainPage">
     <VerticalStackLayout HorizontalOptions="Center" Margin="20">
 
             <Image x:Name="AccountImage"
                    Source="card.png"
                    HeightRequest="200"/>
 
-            <Label
-                x:Name="NameLabel"
-                Text="name"
+             <Label
+                Text="Счет:"
                 VerticalOptions="Center"
                 WidthRequest="300"
-                Margin="0,0,0,30"
+                Margin="5"
                 HorizontalTextAlignment="Center"
                 HorizontalOptions="Center"
-                FontSize="22"
+                TextTransform="Uppercase"
+                FontSize="16"
                 />
+
+            <Picker x:Name="AccountPicker"
+                    Margin="0,5,0,5"
+                    WidthRequest="300"
+                    HorizontalOptions="Center"
+                    Background="DarkRed"
+                    SelectedIndexChanged="AccountPicker_SelectedIndexChanged"
+                    HorizontalTextAlignment="Center">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
 
             <Label
                 Text="Сумма"
@@ -37,7 +50,6 @@
                 TextChanged="ValueEntry_TextChanged"
                 Placeholder="Введите сумму"
                 HorizontalOptions="Center"
-                TextColor="WhiteSmoke"
                 HorizontalTextAlignment="Center"
                 WidthRequest="300"
                 />
@@ -62,7 +74,6 @@
                     WidthRequest="300"
                     HorizontalOptions="Center"
                     Background="DarkRed"
-                    TextColor="WhiteSmoke"
                     HorizontalTextAlignment="Center">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
@@ -71,7 +82,7 @@
             </Picker>
 
             <Label
-                Margin="16"
+                Margin="5"
                 Text="Выберите дату"
                 VerticalOptions="Center"
                 WidthRequest="300"
@@ -94,7 +105,7 @@
                 FontSize="16"
                 />
 
-            <Frame MaximumHeightRequest="150">
+            <Frame MaximumHeightRequest="150" BorderColor="DarkRed">
                 <Frame.Content>
                         <Editor x:Name="DescriptionEditor" Placeholder="Введите описание" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" MinimumHeightRequest="30" AutoSize="TextChanges"/>
                 </Frame.Content>
@@ -102,7 +113,7 @@
 
         <HorizontalStackLayout VerticalOptions="End" HorizontalOptions="Center" Margin="15">
             
-            <Button Background="DarkRed" Text="отменить" x:Name="CancleButton" Clicked="CancleButton_Clicked" TextTransform="Uppercase" FontAttributes="Bold" FontSize="20" TextColor="WhiteSmoke" Margin="0,0,25,0"/>
+            <Button Background="DarkRed" Text="отменить" x:Name="CancleButton" Clicked="CancleButton_Clicked" TextTransform="Uppercase" FontAttributes="Bold" FontSize="20" TextColor="WhiteSmoke" Margin="0,0,50,0"/>
             <Button Background="Green"  Text="Списать" x:Name="AddButton" Clicked="AddButton_Clicked" TextTransform="Uppercase" FontAttributes="Bold" FontSize="20" TextColor="WhiteSmoke"/>
         </HorizontalStackLayout>
         

@@ -3,23 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinanceManager.SettingsPage"
              Title="SettingsPage">
-    <Frame BorderColor="DarkRed"
-           VerticalOptions="Center"
-           HorizontalOptions="Center"
-           HeightRequest="80"
-           WidthRequest="400">
+    <Frame BorderColor="DarkRed" >
         <Frame.Content>
             <HorizontalStackLayout
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
-                Padding="0">
+                Padding="20">
 
                 <Switch x:Name="PasswordSwitch"
                         Toggled="PasswordSwitch_Toggled"
-                        Margin="0"/>
+                        Margin="20"/>
 
                 <Label Text="Password"
-                       Margin="20,0"
+                       Margin="20"
                        VerticalTextAlignment="Center"
                         />
 

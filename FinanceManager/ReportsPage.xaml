@@ -3,26 +3,91 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinanceManager.ReportsPage"
              Title="ReportsPage">
-   <ScrollView>
+
+    <VerticalStackLayout>
+
+        <VerticalStackLayout HorizontalOptions="Center">
+            <HorizontalStackLayout WidthRequest="220" HorizontalOptions="Center">
+                <Label Text="Счет:" WidthRequest="120" HorizontalTextAlignment="End" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Picker x:Name="AccountPicker"
+                    Margin="5,5,0,5"
+                    WidthRequest="100"
+                    HorizontalOptions="End"
+                    Background="DarkRed"
+                    TextColor="WhiteSmoke"
+                    HorizontalTextAlignment="Center"
+                    SelectedIndexChanged="AccountPicker_SelectedIndexChanged">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout WidthRequest="220" HorizontalOptions="Center">
+                <Label Text="Тип операции:" WidthRequest="120" HorizontalTextAlignment="End" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Picker x:Name="OperationTypePicker"
+                    Margin="5,5,0,5"
+                    WidthRequest="100"
+                    HorizontalOptions="End"
+                    Background="DarkRed"
+                    TextColor="WhiteSmoke"
+                    HorizontalTextAlignment="Center"
+                    SelectedIndexChanged="OperationTypePicker_SelectedIndexChanged">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                            <x:String>Все</x:String>
+                         <x:String>Зачисление</x:String>
+                         <x:String>Списывания</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout WidthRequest="220" HorizontalOptions="Center">
+                <Label Text="Операции:" WidthRequest="120" HorizontalTextAlignment="End" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Picker x:Name="OperationPicker"
+                    Margin="5,5,0,5"
+                    WidthRequest="100"
+                    HorizontalOptions="End"
+                    Background="DarkRed"
+                    TextColor="WhiteSmoke"
+                    HorizontalTextAlignment="Center"
+                    SelectedIndexChanged="OperationPicker_SelectedIndexChanged">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
         <VerticalStackLayout>
+
             <HorizontalStackLayout HorizontalOptions="Center">
 
-                <Label Margin="20"
+                <Label Margin="5"
                        HorizontalOptions="Center"
                        Text="Total for all accounts:"/>
 
-                <Label Margin="20"
+                <Label Margin="5"
                        HorizontalOptions="Center"
                        x:Name="totalLabel"/>
 
             </HorizontalStackLayout>
 
-            <Label Margin="20"
+            
+
+            <Label Margin="10"
                    HorizontalOptions="Center"
                    Text="Operations"/>
-            <VerticalStackLayout x:Name="operationsStack"/>
+            <Frame HeightRequest="500" BorderColor="DarkRed">
+                <Frame.Content>
+                    <ScrollView HeightRequest="500">
+                
+                        <VerticalStackLayout x:Name="operationsStack"/>
+                
+                    </ScrollView>
+                </Frame.Content>
+            </Frame>
         </VerticalStackLayout>
-
-    </ScrollView>
+    </VerticalStackLayout>
 
 </ContentPage>

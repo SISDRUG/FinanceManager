@@ -3,11 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinanceManager.AddOperationPage"
              Title="AddOperationPage">
-    <VerticalStackLayout HorizontalOptions="Center" Margin="60">
+    <VerticalStackLayout HorizontalOptions="Center" Margin="20">
 
             <Image x:Name="AccountImage"
                    Source="card.png"
-                   HeightRequest="300"/>
+                   HeightRequest="200"/>
 
             <Label
                 x:Name="NameLabel"
@@ -17,18 +17,18 @@
                 Margin="0,0,0,30"
                 HorizontalTextAlignment="Center"
                 HorizontalOptions="Center"
-                FontSize="29"
+                FontSize="22"
                 />
 
             <Label
                 Text="Сумма"
                 VerticalOptions="Center"
                 WidthRequest="300"
-                Margin="20"
+                Margin="5"
                 HorizontalTextAlignment="Center"
                 HorizontalOptions="Center"
                 TextTransform="Uppercase"
-                FontSize="20"
+                FontSize="16"
                 />
 
             <Entry
@@ -37,6 +37,7 @@
                 TextChanged="ValueEntry_TextChanged"
                 Placeholder="Введите сумму"
                 HorizontalOptions="Center"
+                TextColor="WhiteSmoke"
                 HorizontalTextAlignment="Center"
                 WidthRequest="300"
                 />
@@ -46,21 +47,22 @@
                    />
 
             <Label
-                Margin="20"
-                Text="Type"
+                Margin="5"
+                Text="Выберите операцию"
                 VerticalOptions="Center"
                 WidthRequest="300"
                 HorizontalTextAlignment="Center"
                 HorizontalOptions="Center"
                 TextTransform="Uppercase"
-                FontSize="20"
+                FontSize="16"
                 />
 
             <Picker x:Name="PikerType"
-                    Margin="0,10,0,10"
+                    Margin="0,5,0,5"
                     WidthRequest="300"
                     HorizontalOptions="Center"
                     Background="DarkRed"
+                    TextColor="WhiteSmoke"
                     HorizontalTextAlignment="Center">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
@@ -69,36 +71,36 @@
             </Picker>
 
             <Label
-                Margin="20"
+                Margin="5"
                 Text="Выберите дату"
                 VerticalOptions="Center"
                 WidthRequest="300"
                 HorizontalTextAlignment="Center"
                 HorizontalOptions="Center"
                 TextTransform="Uppercase"
-                FontSize="20"
+                FontSize="16"
                 />
 
             <DatePicker x:Name="DatePiker" HorizontalOptions="Center" />
 
             <Label
-                Margin="20"
+                Margin="5"
                 Text="Добавить Описание"
                 VerticalOptions="Center"
                 WidthRequest="300"
                 HorizontalTextAlignment="Center"
                 HorizontalOptions="Center"
                 TextTransform="Uppercase"
-                FontSize="20"
+                FontSize="16"
                 />
 
-            <Frame MaximumHeightRequest="300">
+            <Frame MaximumHeightRequest="150" BorderColor="DarkRed">
                 <Frame.Content>
                         <Editor x:Name="DescriptionEditor" Placeholder="Введите описание" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" MinimumHeightRequest="30" AutoSize="TextChanges"/>
                 </Frame.Content>
             </Frame>
 
-        <HorizontalStackLayout VerticalOptions="End" HorizontalOptions="Center" Margin="20">
+        <HorizontalStackLayout VerticalOptions="End" HorizontalOptions="Center" Margin="15">
             
             <Button Background="DarkRed" Text="отменить" x:Name="CancleButton" Clicked="CancleButton_Clicked" TextTransform="Uppercase" FontAttributes="Bold" FontSize="20" TextColor="WhiteSmoke" Margin="0,0,50,0"/>
             <Button Background="Green"  Text="зачислить" x:Name="AddButton" Clicked="AddButton_Clicked" TextTransform="Uppercase" FontAttributes="Bold" FontSize="20" TextColor="WhiteSmoke"/>

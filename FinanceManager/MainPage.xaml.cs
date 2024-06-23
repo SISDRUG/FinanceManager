@@ -35,15 +35,16 @@ public partial class MainPage : ContentPage
     public async Task ShowTodayOperations()
     {
         VStackTodayOperations.Children.Clear();
+        VStackLabel.Children.Clear();
         //var todayOperations = await _database.GetAccountStatsByShortStringDate(DateTime.Now);
         var todayOperations = await _database.GetAccountStatsAsync();
-        
-        Console.WriteLine();
+        float income = 0;
+        float outcome = 0;
+        float total = 0;
+
         if (todayOperations.Count != 0)
         {
-            float income = 0;
-            float outcome = 0;
-            float total = 0;
+            
             
             foreach (var operation in todayOperations)
             {
@@ -68,7 +69,7 @@ public partial class MainPage : ContentPage
                     var stackLayout = new HorizontalStackLayout
                     {
                         HorizontalOptions = LayoutOptions.Center,
-                        WidthRequest = 500,
+                        WidthRequest = 300,
 
 
 
@@ -86,7 +87,7 @@ public partial class MainPage : ContentPage
                     var secondVertStack = new VerticalStackLayout
                     {
                         HorizontalOptions = LayoutOptions.End,
-                        WidthRequest = 360,
+                        WidthRequest = 220,
                         VerticalOptions = LayoutOptions.Center,
 
 
@@ -100,8 +101,8 @@ public partial class MainPage : ContentPage
                         HorizontalOptions = LayoutOptions.End,
                         Text = labelText,
                         HorizontalTextAlignment = TextAlignment.End,
-                        FontSize = 20,
-                        MaximumWidthRequest = 360,
+                        FontSize = 16,
+                        MaximumWidthRequest = 220,
                         LineBreakMode = LineBreakMode.TailTruncation,
                     };
 
@@ -120,7 +121,7 @@ public partial class MainPage : ContentPage
                         Source = account.Source,
                         HeightRequest = 80,
                         WidthRequest = 80,
-                        Margin = new Thickness(40,0),
+                        Margin = new Thickness(5,0),
 
                     };
 
@@ -133,7 +134,7 @@ public partial class MainPage : ContentPage
                     var frame = new Frame {
                         BorderColor = Colors.DarkRed,
                         Content = stackLayout,
-                        WidthRequest = 500,
+                        WidthRequest = 350,
                         Margin = new Thickness(0, 10, 0, 10),
                         Padding = 10,
                         HeightRequest = 100,
@@ -173,10 +174,23 @@ public partial class MainPage : ContentPage
         }
         else
         {
-            Label Lab = new Label { Text = "Сегодня операций еще не было" };
-            VStackTodayOperations.Children.Add(Lab);
+            OutcomeLabel.Text = "0";
+            IncomeLabel.Text = "0";
+            TotalLabel.Text =  "0";
+            Label Lab = new Label { Text = "Сегодня операций еще не было" , HorizontalOptions = LayoutOptions.Center , Margin= new Thickness(5)};
+            VStackLabel.Children.Add(Lab);
         }
        
     }
 
+
+    async void AddButton_Clicked(System.Object sender, System.EventArgs e)
+    {
+        await Navigation.PushAsync(new AddOperationFromMainPage());
+    }
+
+    async void TakeButton_Clicked(System.Object sender, System.EventArgs e)
+    {
+        await Navigation.PushAsync(new TakeOperationFromMainPage());
+    }
 }

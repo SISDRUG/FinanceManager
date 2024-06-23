@@ -62,13 +62,20 @@ public partial class AccountsPage : ContentPage
         for (int i = 0; i < accountCount; i++)
         {
             var account = accounts[i]; // Локальная переменная для аккаунта
+
+            Image accountImage = new Image { Source = account.Source,  HeightRequest = 166 };
+            Label nameLabel = new Label { Text = account.Name, HorizontalOptions = LayoutOptions.Center };
+            VerticalStackLayout VSstack = new VerticalStackLayout { HeightRequest = 200 };
+            VSstack.Children.Add(accountImage);
+            VSstack.Children.Add(nameLabel);
+
             var frame = new Frame
             {
                 BorderColor = Colors.DarkRed,
                 CornerRadius = 10,
                 Padding = 10,
                 HeightRequest = 200,
-                Content = new Image { Source = account.Source },
+                Content = VSstack,
             };
 
             var tapGestureRecognizer = new TapGestureRecognizer();
@@ -88,9 +95,8 @@ public partial class AccountsPage : ContentPage
 
         var addButton = new Button
         {
-            Text = "add",
-            WidthRequest = 90,
-            Background = Brush.DarkRed,
+            Text = "Добавить счет",
+            Background = Brush.Green,
             TextColor = Colors.WhiteSmoke,
 
         };
@@ -102,8 +108,7 @@ public partial class AccountsPage : ContentPage
         var clearButton = new Button
         {
 
-            Text = "clear",
-            WidthRequest = 100,
+            Text = "Удалить все",
             IsEnabled = false,
             Background = Brush.DarkRed,
             TextColor = Colors.WhiteSmoke,
@@ -116,6 +121,7 @@ public partial class AccountsPage : ContentPage
         if (accountCount > 0)
         {
             clearButton.IsEnabled = true;
+            clearButton.TextColor = Colors.WhiteSmoke;
         }
     }
 

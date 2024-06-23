@@ -60,7 +60,18 @@
         ContentTemplate="{DataTemplate local:AboutOperationPage}"
         Route="AboutOperationPage"
         />
+    <ShellContent
+        Title="AddOperationFromMain"
+        ContentTemplate="{DataTemplate local:AddOperationFromMainPage}"
+        Route="AddOperationFromMainPage"
+        />
+    <ShellContent
+        Title="TakeOperationFromMain"
+        ContentTemplate="{DataTemplate local:TakeOperationFromMainPage}"
+        Route="TakeOperationFromMainPage"
+        />
 
+    
 
 
 

@@ -54,6 +54,11 @@ public partial class GeneratingAccountPage : ContentPage
 
     async void addButton_Clicked(System.Object sender, System.EventArgs e)
     {
+        if (NameEntry.Text == null || NameEntry.Text == "")
+        {
+            NameEntry.Text = "Базовый";
+        }
+
         var account = new TodoItem { Source = Sources[TypePicker.SelectedItem.ToString()], Name = NameEntry.Text};
         DateTime chosedDate;
         if (DatePiker.Date == DateTime.Today)
@@ -65,15 +70,14 @@ public partial class GeneratingAccountPage : ContentPage
             chosedDate = DatePiker.Date;
         }
 
+
         if (DescriptionEditor.Text == null || DescriptionEditor.Text == "")
         {
             DescriptionEditor.Text = "Отсутствует";
         }
 
-        if (NameEntry.Text == null || NameEntry.Text == "")
-        {
-            NameEntry.Text = "Базовый";
-        }
+
+
 
         await database.SaveItemAsync(account);
         var accounts = await database.GetItemsAsync();

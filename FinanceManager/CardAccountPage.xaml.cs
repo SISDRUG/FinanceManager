@@ -1,4 +1,5 @@
-﻿namespace FinanceManager;
+﻿
+namespace FinanceManager;
 
 public partial class CardAccountPage : ContentPage
 {
@@ -16,15 +17,16 @@ public partial class CardAccountPage : ContentPage
         InitializeComponent();
 
         accountIDLabel.Text = account.ID.ToString();
+        accountName.Text = account.Name;
 
         StackLayout currentStackLayout = new StackLayout
         {
             Padding = 10,
-            HeightRequest = 200,
-            Margin = new Thickness(0,20,0,200),
+            HeightRequest = 100,
+            Margin = new Thickness(0,0,0,20),
         };
 
-        Image cardImg = new Image { Source = account.Source, HeightRequest = 400};
+        Image cardImg = new Image { Source = account.Source, HeightRequest = 100};
 
         currentStackLayout.Children.Add(cardImg);
         //currentFrame.Content.InsertLogicalChild(1,accountIDLabel);
@@ -70,9 +72,10 @@ public partial class CardAccountPage : ContentPage
 
             Button deletButton = new Button
             {
-                Text = "del",
+                Text = "Удалить операцию",
                 Background = Brush.DarkRed,
                 TextColor = Colors.WhiteSmoke,
+                Margin = new Thickness(15),
             };
 
             deletButton.Clicked += async (sender, e) =>
@@ -87,11 +90,19 @@ public partial class CardAccountPage : ContentPage
             {
                 BorderColor = Colors.DarkRed,
                 Content = stackLayout,
-                WidthRequest = 500,
+                WidthRequest = 400,
                 Margin = new Thickness(0, 10, 0, 10),
                 Padding = 10,
                 HeightRequest = 100,
             };
+
+            var tapGestureRecognizer = new TapGestureRecognizer();
+            tapGestureRecognizer.Tapped += async (s, e) =>
+            {
+                await Navigation.PushAsync(new AboutOperationPage(stat)); // Используем локальную переменную
+            };
+
+            frame.GestureRecognizers.Add(tapGestureRecognizer);
 
             StatVertStack.Children.Add(frame);
         }

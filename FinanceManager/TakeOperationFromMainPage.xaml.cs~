@@ -1,0 +1,11 @@
+﻿using System.Globalization;
+using System.Text.RegularExpressions;
+namespace FinanceManager;
+
+public partial class TakeOperationFromMainPage : ContentPage
+{
+    public TakeOperationFromMainPage()
+    {
+        InitializeComponent();
+    }
+}
