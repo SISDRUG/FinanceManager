@@ -1,22 +1,18 @@
 ﻿<Properties StartupConfiguration="{BA89801D-3F82-46CF-B11C-92AE56432EC7}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FinanceManager/MainPage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FinanceManager/ReportsPage.xaml.cs">
     <Files>
-      <File FileName="FinanceManager/App.xaml.cs" />
-      <File FileName="FinanceManager/AppShell.xaml" Line="10" Column="18" />
-      <File FileName="FinanceManager/MainPage.xaml" Line="50" Column="49" />
-      <File FileName="FinanceManager/MainPage.xaml.cs" Line="100" Column="75" />
-      <File FileName="FinanceManager/sqlite.cs" Line="57" Column="15" />
-      <File FileName="FinanceManager/ReportsPage.xaml.cs" Line="20" Column="5" />
+      <File FileName="FinanceManager/ReportsPage.xaml.cs" Line="1" Column="38" />
+      <File FileName="FinanceManager/sqlite.cs" Line="30" Column="29" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FinanceManager" expanded="True">
             <Node name="FinanceManager">
-              <Node name="App.xaml" expanded="True" />
-              <Node name="MainPage.xaml" expanded="True" selected="True" />
-              <Node name="ReportsPage.xaml" expanded="True" />
+              <Node name="Platforms" expanded="True" />
+              <Node name="ReportsPage.xaml" expanded="True">
+                <Node name="ReportsPage.xaml.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -44,16 +40,20 @@
           <Value>This</Value>
           <Value>todayOperations</Value>
           <Value>__database</Value>
+          <Value>sortestats</Value>
+          <Value>tt</Value>
+          <Value>operation</Value>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.FinanceManager Xamarin.HotReload.DebuggerTimeoutException.FinanceManager.HideInfoBar="True" PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.FinanceManager PreferredExecutionTarget="Android.pixel_5_-_api_33" Xamarin.HotReload.DebuggerTimeoutException.FinanceManager.HideInfoBar="True" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
   <MonoDevelop.MonoDroid LastDeploySdkVersion="34.0.0-rc.1.432" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

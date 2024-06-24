@@ -1,0 +1,5 @@
+/Users/sisdrug/Desktop/FinanceManagerRep/SaveHelper/obj/Debug/net8.0/SaveHelper.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sisdrug/Desktop/FinanceManagerRep/SaveHelper/obj/Debug/net8.0/SaveHelper.AssemblyInfoInputs.cache
+/Users/sisdrug/Desktop/FinanceManagerRep/SaveHelper/obj/Debug/net8.0/SaveHelper.AssemblyInfo.cs
+/Users/sisdrug/Desktop/FinanceManagerRep/SaveHelper/obj/Debug/net8.0/SaveHelper.csproj.CoreCompileInputs.cache
+/Users/sisdrug/Desktop/FinanceManagerRep/SaveHelper/obj/Debug/net8.0/SaveHelper.sourcelink.json

@@ -42,12 +42,23 @@ public partial class AddOperationFromMainPage : ContentPage
     {
         var accounts = await _database.GetAccountsAsync();
         _accounts = accounts;
+        int i = 1;
         var accountPickerList = new List<string>();
         AccountImage.Source = accounts[0].Source;
         foreach (var account in accounts)
         {
-            accountPickerList.Add(account.Name);
-            _accountDictionary.Add(account.Name,account.ID);
+            if (accountPickerList.Contains(account.Name))
+            {
+                accountPickerList.Add(account.Name + i);
+                _accountDictionary.Add(account.Name + i, account.ID);
+                i++;
+            }
+            else
+            {
+                accountPickerList.Add(account.Name);
+                _accountDictionary.Add(account.Name,account.ID);
+            }
+            
         }
         AccountPicker.ItemsSource = accountPickerList;
         AccountPicker.SelectedIndex = 0;
@@ -71,7 +82,7 @@ public partial class AddOperationFromMainPage : ContentPage
             DescriptionEditor.Text = "Отсутствует";
         }
 
-        Single.TryParse(ValueEntry.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out Single value);
+        Double.TryParse(ValueEntry.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out Double value);
         var operation = new AccountStats { AccountID = _accountDictionary[AccountPicker.SelectedItem.ToString()], Value = value, Operation = PikerType.SelectedItem?.ToString() ?? "noType", Description = DescriptionEditor.Text, Type = "income", date = chosedDate };
         await database.SaveItemAsync(operation);
         await Navigation.PopAsync();

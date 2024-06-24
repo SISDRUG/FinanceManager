@@ -1,0 +1,9 @@
+﻿namespace FinanceManager;
+
+public partial class CardAccountSettingPage : ContentPage
+{
+    public CardAccountSettingPage()
+    {
+        InitializeComponent();
+    }
+}

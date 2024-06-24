@@ -70,8 +70,11 @@
         ContentTemplate="{DataTemplate local:TakeOperationFromMainPage}"
         Route="TakeOperationFromMainPage"
         />
-
-    
+    <ShellContent
+        Title="CardAccountSetting"
+        ContentTemplate="{DataTemplate local:CardAccountSettingPage}"
+        Route="CardAccountSettingPage"
+        />
 
 
 

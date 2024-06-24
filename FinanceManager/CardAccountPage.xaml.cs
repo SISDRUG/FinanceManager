@@ -11,36 +11,43 @@ public partial class CardAccountPage : ContentPage
 
 
     private Database database = new Database(Constants.DatabasePath);
+    private TodoItem _account = new TodoItem();
+
+
 
     public CardAccountPage(TodoItem account)
     {
         InitializeComponent();
-
+        this.Title = account.Name;
         accountIDLabel.Text = account.ID.ToString();
-        accountName.Text = account.Name;
+        _account = account;
+        AccountImage.Source = account.Source;
 
-        StackLayout currentStackLayout = new StackLayout
-        {
-            Padding = 10,
-            HeightRequest = 100,
-            Margin = new Thickness(0,0,0,20),
-        };
 
-        Image cardImg = new Image { Source = account.Source, HeightRequest = 100};
+        //StackLayout currentStackLayout = new StackLayout
+        //{
+        //    Padding = 10,
+        //    HeightRequest = 100,
+        //    Margin = new Thickness(70,0,0,20),
+    //};
 
-        currentStackLayout.Children.Add(cardImg);
-        //currentFrame.Content.InsertLogicalChild(1,accountIDLabel);
+    //    Image cardImg = new Image { Source = account.Source, HeightRequest = 100};
 
-        BancAccountVertStack.Children.Add(currentStackLayout);        
+        //currentStackLayout.Children.Add(cardImg);
+        ////currentFrame.Content.InsertLogicalChild(1,accountIDLabel);
+
+        //BancAccountVertStack.Children.Add(currentStackLayout);        
 
 
     }
+
 
     protected override void OnAppearing()
     {
         base.OnAppearing();
         // Ваш код для обновления данных или логики
         ShowStats(Convert.ToInt32(accountIDLabel.Text));
+        
     }
 
 
@@ -48,11 +55,11 @@ public partial class CardAccountPage : ContentPage
     {
         StatVertStack.Children.Clear();
         var database = new Database(Constants.DatabasePath);
-        //var accountsStats = await database.GetAccountStatsAsync();
+        var account = await database.GetAccountByIdAsync(accountID);
         var accountsStats = await database.GetAccountStatsByIdAsync(accountID);
         var stackLayouts = new List<StackLayout>();
         int statsCount = accountsStats.Count;
-        Single total = 0;
+        Double total = 0;
         for (int i = 0; i < statsCount; i++)
         {
             var stat = accountsStats[i]; // Локальная переменная для аккаунта
@@ -62,12 +69,35 @@ public partial class CardAccountPage : ContentPage
                 HorizontalOptions = LayoutOptions.Center ,
                 VerticalOptions = LayoutOptions.Center,
                 Padding = 10,
-                HeightRequest = 100,
+                HeightRequest = 120,
             };
 
-            Label lb = new Label
+            Label lbDate = new Label
             {
-                Text = ("id" + stat.AccountID.ToString() + " value " + stat.Value + " operation " + stat.Operation)
+                Text = (stat.date.ToLongDateString()),
+                HorizontalOptions = LayoutOptions.Center
+            };
+            Label lbTime = new Label
+            {
+                Text = (stat.date.ToLongTimeString()),
+                FontSize = 12,
+                WidthRequest= 133,
+                HorizontalOptions = LayoutOptions.Center,
+            };
+            Label lbValue = new Label
+            {
+                Text = (stat.Value.ToString("0.##")),
+                WidthRequest = 100,
+                Margin = new Thickness(40, 0),
+                TextColor = Colors.Green,
+                FontSize = 18,
+                HorizontalOptions = LayoutOptions.Start
+            };
+            Label lbOperation = new Label
+            {
+                Text = stat.Operation,
+                WidthRequest = 133,
+                HorizontalOptions = LayoutOptions.End,
             };
 
             Button deletButton = new Button
@@ -75,7 +105,7 @@ public partial class CardAccountPage : ContentPage
                 Text = "Удалить операцию",
                 Background = Brush.DarkRed,
                 TextColor = Colors.WhiteSmoke,
-                Margin = new Thickness(15),
+                Margin = new Thickness(10),
             };
 
             deletButton.Clicked += async (sender, e) =>
@@ -84,8 +114,29 @@ public partial class CardAccountPage : ContentPage
                 ShowStats(accountID);
            };
 
-            stackLayout.Children.Add(lb);
+            if (stat.Value < 0)
+            {
+                lbValue.TextColor = Colors.DarkRed;
+            }
+
+
+            HorizontalStackLayout HStack = new HorizontalStackLayout
+            {
+                HorizontalOptions = LayoutOptions.Center,
+                WidthRequest = 400,
+            };
+
+            HStack.Children.Add(lbValue);
+            HStack.Children.Add(lbTime);
+            HStack.Children.Add(lbOperation);
+
+            stackLayout.Children.Add(lbDate);
+            stackLayout.Children.Add(lbTime);
+            stackLayout.Children.Add(HStack);
             stackLayout.Children.Add(deletButton);
+
+
+
             var frame = new Frame
             {
                 BorderColor = Colors.DarkRed,
@@ -93,7 +144,7 @@ public partial class CardAccountPage : ContentPage
                 WidthRequest = 400,
                 Margin = new Thickness(0, 10, 0, 10),
                 Padding = 10,
-                HeightRequest = 100,
+                HeightRequest = 120,
             };
 
             var tapGestureRecognizer = new TapGestureRecognizer();
@@ -107,7 +158,7 @@ public partial class CardAccountPage : ContentPage
             StatVertStack.Children.Add(frame);
         }
 
-        accounValueLabel.Text = total.ToString();
+        accounValueLabel.Text = total.ToString("0.##");
 
     }
 
@@ -137,5 +188,13 @@ public partial class CardAccountPage : ContentPage
     {
         await Navigation.PushAsync(new TakeOperationsPage(accountIDLabel.Text));
 
+    }
+
+    async void Button_Clicked(System.Object sender, System.EventArgs e)
+    {
+        var account = await database.GetAccountByIdAsync(int.Parse(accountIDLabel.Text));
+        await Navigation.PushAsync(new CardAccountSettingPage(account));
+        _account = await database.GetAccountByIdAsync(int.Parse(accountIDLabel.Text));
+        //accountName.Text = _account.Name;
     }
 }

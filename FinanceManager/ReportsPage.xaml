@@ -4,83 +4,169 @@
              x:Class="FinanceManager.ReportsPage"
              Title="ReportsPage">
 
-    <VerticalStackLayout>
+    <VerticalStackLayout x:Name="MainStack">
+            <ActivityIndicator x:Name="Indicator" Color="DarkRed" IsVisible="false" Scale="4" ZIndex="2" WidthRequest="400" HeightRequest="800" IsRunning="False"/>
 
         <VerticalStackLayout HorizontalOptions="Center">
-            <HorizontalStackLayout WidthRequest="220" HorizontalOptions="Center">
-                <Label Text="Счет:" WidthRequest="120" HorizontalTextAlignment="End" HorizontalOptions="End" VerticalOptions="Center"/>
-                <Picker x:Name="AccountPicker"
-                    Margin="5,5,0,5"
-                    WidthRequest="100"
-                    HorizontalOptions="End"
-                    Background="DarkRed"
-                    TextColor="WhiteSmoke"
-                    HorizontalTextAlignment="Center"
-                    SelectedIndexChanged="AccountPicker_SelectedIndexChanged">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
-            </HorizontalStackLayout>
-            <HorizontalStackLayout WidthRequest="220" HorizontalOptions="Center">
-                <Label Text="Тип операции:" WidthRequest="120" HorizontalTextAlignment="End" HorizontalOptions="End" VerticalOptions="Center"/>
-                <Picker x:Name="OperationTypePicker"
-                    Margin="5,5,0,5"
-                    WidthRequest="100"
-                    HorizontalOptions="End"
-                    Background="DarkRed"
-                    TextColor="WhiteSmoke"
-                    HorizontalTextAlignment="Center"
-                    SelectedIndexChanged="OperationTypePicker_SelectedIndexChanged">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                            <x:String>Все</x:String>
-                         <x:String>Зачисление</x:String>
-                         <x:String>Списывания</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
-            </HorizontalStackLayout>
-            <HorizontalStackLayout WidthRequest="220" HorizontalOptions="Center">
-                <Label Text="Операции:" WidthRequest="120" HorizontalTextAlignment="End" HorizontalOptions="End" VerticalOptions="Center"/>
-                <Picker x:Name="OperationPicker"
-                    Margin="5,5,0,5"
-                    WidthRequest="100"
-                    HorizontalOptions="End"
-                    Background="DarkRed"
-                    TextColor="WhiteSmoke"
-                    HorizontalTextAlignment="Center"
-                    SelectedIndexChanged="OperationPicker_SelectedIndexChanged">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
-            </HorizontalStackLayout>
-        </VerticalStackLayout>
+
+            <VerticalStackLayout HorizontalOptions="Center" WidthRequest="400">
+                <HorizontalStackLayout HorizontalOptions="Center" Margin="0,20" >
+                    <HorizontalStackLayout>
+                    <Label Text="Счет:"  FontSize="16" HorizontalTextAlignment="End" HorizontalOptions="End" VerticalOptions="Center"/>
+                     </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                    <Picker x:Name="AccountPicker"
+                        WidthRequest="100"
+                        Margin="10,0"
+                        HorizontalOptions="End"
+                        Background="DarkRed"
+                        TextColor="WhiteSmoke"
+                        HorizontalTextAlignment="Center"
+                        SelectedIndexChanged="AccountPicker_SelectedIndexChanged">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                    </HorizontalStackLayout>
+
+                    <Label Text="Тип операции:"  FontSize="16"  HorizontalTextAlignment="End"  VerticalOptions="Center"/>
+                    <Picker x:Name="OperationTypePicker"
+                        Margin="10,0"
+                        WidthRequest="100"
+                        HorizontalOptions="End"
+                        Background="DarkRed"
+                        TextColor="WhiteSmoke"
+                        HorizontalTextAlignment="Center"
+                        SelectedIndexChanged="OperationTypePicker_SelectedIndexChanged">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                                <x:String>Все</x:String>
+                             <x:String>Зачисление</x:String>
+                             <x:String>Списывания</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+
+            <VerticalStackLayout HorizontalOptions="Center" WidthRequest="450">
+
+                <HorizontalStackLayout  HorizontalOptions="Center">
+
+                    <Label Text="Поиск:" FontSize="16" VerticalOptions="Center" Margin="-20,0,0,0" />
+
+                    <Entry  x:Name="SearchEntry"
+                            Placeholder="Слово"
+                            WidthRequest="100"
+                            Background="DarkRed"
+                            TextColor="WhiteSmoke"
+                            Margin="10,0,40,0"
+                            TextChanged="SearchEntry_TextChanged"
+                            HorizontalTextAlignment="Center"/>
+
+                    <Label Text="Операции:"   FontSize="16" HorizontalOptions="Center" Margin="0,0,0,0"  VerticalOptions="Center"/>
+                    <Picker x:Name="OperationPicker"
+                        Margin="10,0,0,0"
+                        WidthRequest="100"
+                        Background="DarkRed"
+                        TextColor="WhiteSmoke"
+                        HorizontalTextAlignment="Center"
+                        SelectedIndexChanged="OperationPicker_SelectedIndexChanged">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                    
+
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+
+            <Frame BorderColor="DarkRed" HeightRequest="100"  Margin="0,10">
+                <Frame.Content>
+                    <VerticalStackLayout>
+                        <HorizontalStackLayout HorizontalOptions="Center">
+                            <Label Text="По значению" FontSize="18" HorizontalTextAlignment="Center" Margin="0,-10,0,0"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout HorizontalOptions="Center">
+                
+                            <HorizontalStackLayout VerticalOptions="Center">
+                                    <Label Text="от" FontSize="18" Margin="-30,0,10,0"/>
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout>
+                                    <Entry  x:Name="MinValueEntry"
+                                            Placeholder="-∞"
+                                            Margin="5,5,0,5"
+                                            WidthRequest="100"
+                                            Background="DarkRed"
+                                            TextColor="WhiteSmoke"
+                                            TextChanged="MinValueEntry_TextChanged"
+                                            HorizontalTextAlignment="Center"/>
+
+                            </VerticalStackLayout>
+                                <Label Text="до" FontSize="18" VerticalOptions="Center" Margin="20,0,20,0"/>
+                            <VerticalStackLayout>
+                                    <Entry  x:Name="MaxValueEntry"
+                                            Margin="5,5,0,5"
+                                            Placeholder="+∞"
+                                            WidthRequest="100"
+                                            Background="DarkRed"
+                                            TextColor="WhiteSmoke"
+                                            TextChanged="MaxValueEntry_TextChanged"
+                                            HorizontalTextAlignment="Center"/>
+
+                            </VerticalStackLayout>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </Frame.Content>
+
+            </Frame>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <VerticalStackLayout>
+                    <Button  x:Name="PDFbutton"
+                             Text="PDF"
+                             Clicked="PDFbutton_Clicked"
+                            Margin="5,5,0,5"
+                            WidthRequest="100"
+                            Background="DarkRed"
+                            TextColor="WhiteSmoke"/>
+
+            </VerticalStackLayout>
+
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+
         <VerticalStackLayout>
+        <Frame MaximumWidthRequest="300" BorderColor="DarkRed" HorizontalOptions="Center">
+                <Frame.Content>
+                    <HorizontalStackLayout HorizontalOptions="Center">
 
-            <HorizontalStackLayout HorizontalOptions="Center">
+                        <Label Margin="5"
+                               FontSize="16"
+                               HorizontalOptions="Center"
+                               Text="Сумма: "/>
 
-                <Label Margin="5"
-                       HorizontalOptions="Center"
-                       Text="Сумма: "/>
+                        <Label Margin="5"
+                               FontSize="16"
+                               HorizontalOptions="Center"
+                               x:Name="totalLabel"/>
 
-                <Label Margin="5"
-                       HorizontalOptions="Center"
-                       x:Name="totalLabel"/>
-
-            </HorizontalStackLayout>
-
+                    </HorizontalStackLayout>
+                </Frame.Content>
+            </Frame>
             
 
             <Label Margin="10"
                    HorizontalOptions="Center"
                    Text="Операции"/>
-            <Frame HeightRequest="500" BorderColor="DarkRed">
+            <Frame HeightRequest="300" BorderColor="DarkRed">
                 <Frame.Content>
-                    <ScrollView HeightRequest="500">
+                    <ScrollView HeightRequest="300">
                 
                         <VerticalStackLayout x:Name="operationsStack"/>
                 

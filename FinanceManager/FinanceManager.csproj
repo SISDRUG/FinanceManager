@@ -64,6 +64,8 @@
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 		<PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.2" />
 		<PackageReference Include="Newtonsoft.Json.Schema" Version="4.0.1" />
+		<PackageReference Include="PDFsharp" Version="6.1.0" />
+		<PackageReference Include="Syncfusion.Pdf.NET" Version="26.1.38" />
 	</ItemGroup>
 
 	<!-- Build Properties must be defined within these property groups to ensure successful publishing
@@ -77,6 +79,9 @@
 	  <None Remove="Resources\Images\creditcard.png" />
 	  <None Remove="Resources\Images\cash.png" />
 	  <None Remove="Resources\Images\arrows.png" />
+	  <None Remove="Resources\Images\png-clipart-paper-computer-icons-pen-pen-angle-pencil.png" />
+	  <None Remove="Resources\Images\setting.png" />
+	  <None Remove="Resources\Images\appicon.svg" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\fasupport.png" />
@@ -85,6 +90,7 @@
 	  <BundleResource Include="Resources\Images\creditcard.png" />
 	  <BundleResource Include="Resources\Images\cash.png" />
 	  <BundleResource Include="Resources\Images\arrows.png" />
+	  <BundleResource Include="Resources\Images\setting.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Models\" />

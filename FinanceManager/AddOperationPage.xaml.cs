@@ -64,7 +64,7 @@ public partial class AddOperationPage : ContentPage
             DescriptionEditor.Text = "Отсутствует";
         }
 
-        Single.TryParse(ValueEntry.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out Single value);
+        Double.TryParse(ValueEntry.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out Double value);
         var operation = new AccountStats { AccountID = Convert.ToInt32(accounIDLabel.Text) , Value = value, Operation = PikerType.SelectedItem?.ToString() ?? "noType" ,Description = DescriptionEditor.Text , Type = "income", date = chosedDate };
         await database.SaveItemAsync(operation);
         await Navigation.PopAsync();

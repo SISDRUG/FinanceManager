@@ -46,9 +46,17 @@ public partial class TakeOperationFromMainPage : ContentPage
         AccountImage.Source = accounts[0].Source;
         foreach (var account in accounts)
         {
-
-            accountPickerList.Add(account.Name);
-            _accountDictionary.Add(account.Name, account.ID);
+            if (accountPickerList.Contains(account.Name))
+            {
+                accountPickerList.Add(account.Name + i);
+                _accountDictionary.Add(account.Name + i, account.ID);
+                i++;
+            }
+            else
+            {
+                accountPickerList.Add(account.Name);
+                _accountDictionary.Add(account.Name, account.ID);
+            }
         }
         AccountPicker.ItemsSource = accountPickerList;
         AccountPicker.SelectedIndex = 0;
@@ -72,7 +80,7 @@ public partial class TakeOperationFromMainPage : ContentPage
             DescriptionEditor.Text = "Отсутствует";
         }
 
-        Single.TryParse(ValueEntry.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out Single value);
+        Double.TryParse(ValueEntry.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out Double value);
         var operation = new AccountStats { AccountID = _accountDictionary[AccountPicker.SelectedItem.ToString()], Value = value * -1, Operation = PikerType.SelectedItem?.ToString() ?? "noType", Description = DescriptionEditor.Text, Type = "outcome", date = chosedDate };
         await database.SaveItemAsync(operation);
         await Navigation.PopAsync();

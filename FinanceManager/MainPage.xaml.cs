@@ -38,9 +38,9 @@ public partial class MainPage : ContentPage
         VStackLabel.Children.Clear();
         //var todayOperations = await _database.GetAccountStatsByShortStringDate(DateTime.Now);
         var todayOperations = await _database.GetAccountStatsAsync();
-        float income = 0;
-        float outcome = 0;
-        float total = 0;
+        Double income = 0;
+        Double outcome = 0;
+        Double total = 0;
 
         if (todayOperations.Count != 0)
         {
@@ -84,7 +84,7 @@ public partial class MainPage : ContentPage
 
                     };
 
-                    var secondVertStack = new VerticalStackLayout
+                    var secondVertStack = new HorizontalStackLayout
                     {
                         HorizontalOptions = LayoutOptions.End,
                         WidthRequest = 220,
@@ -94,27 +94,37 @@ public partial class MainPage : ContentPage
 
                     };
 
-                    string labelText =operation.Value.ToString()+ "     " + "Счет: " + account.Name;
 
-                    Label lb = new Label
+                    Label lbValue = new Label
                     {
                         HorizontalOptions = LayoutOptions.End,
-                        Text = labelText,
+                        Text = operation.Value.ToString("0.##"),
                         HorizontalTextAlignment = TextAlignment.End,
                         FontSize = 16,
-                        MaximumWidthRequest = 220,
+                        MinimumWidthRequest = 70,
+                        MaximumWidthRequest = 70,
                         LineBreakMode = LineBreakMode.TailTruncation,
                     };
 
                     if (operation.Value < 0)
                     {
-                        lb.TextColor = Colors.DarkRed;
+                        lbValue.TextColor = Colors.DarkRed;
                     }
                     else
                     {
-                        lb.TextColor = Colors.Green;
+                        lbValue.TextColor = Colors.Green;
                     }
 
+                    Label lbAccount = new Label
+                    {
+                        HorizontalOptions = LayoutOptions.End,
+                        Text = "Счет: " + account.Name,
+                        HorizontalTextAlignment = TextAlignment.End,
+                        FontSize = 16,
+                        MinimumWidthRequest = 150,
+                        MaximumWidthRequest = 150,
+                        LineBreakMode = LineBreakMode.TailTruncation,
+                    };
 
                     Image accountImage = new Image
                     {
@@ -127,7 +137,8 @@ public partial class MainPage : ContentPage
 
 
                     firstVertStack.Children.Add(accountImage);
-                    secondVertStack.Children.Add(lb);
+                    secondVertStack.Children.Add(lbValue);
+                    secondVertStack.Children.Add(lbAccount);
                     stackLayout.Children.Add(firstVertStack);
                     stackLayout.Children.Add(secondVertStack);
 
@@ -159,9 +170,9 @@ public partial class MainPage : ContentPage
 
             PBar.Progress = totalAmount;
 
-            OutcomeLabel.Text = outcome.ToString() ?? "0";
-            IncomeLabel.Text = income.ToString() ?? "0";
-            TotalLabel.Text = total.ToString() ?? "0";
+            OutcomeLabel.Text = outcome.ToString("0.##") ?? "0";
+            IncomeLabel.Text = income.ToString("0.##") ?? "0";
+            TotalLabel.Text = total.ToString("0.##") ?? "0";
             if (total < 0)
             {
                 TotalLabel.TextColor = Colors.Red;

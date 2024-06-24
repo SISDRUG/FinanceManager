@@ -63,11 +63,23 @@ public partial class AccountsPage : ContentPage
         {
             var account = accounts[i]; // Локальная переменная для аккаунта
 
-            Image accountImage = new Image { Source = account.Source,  HeightRequest = 166 };
-            Label nameLabel = new Label { Text = account.Name, HorizontalOptions = LayoutOptions.Center };
+            Image accountImage = new Image { Source = account.Source,  HeightRequest = 155 };
+            Label nameLabel = new Label {Text = account.Name, FontSize = 20 , TextColor = Colors.WhiteSmoke ,FontAttributes = FontAttributes.Bold ,HorizontalOptions = LayoutOptions.Center };
             VerticalStackLayout VSstack = new VerticalStackLayout { HeightRequest = 200 };
+
+            var frameLB = new Frame
+            {
+                BorderColor = Colors.DarkRed,
+                BackgroundColor = Colors.DarkRed,
+                CornerRadius = 10,
+                MaximumWidthRequest = 200,
+                HeightRequest = 60,
+                Content = nameLabel,
+            };
+
             VSstack.Children.Add(accountImage);
-            VSstack.Children.Add(nameLabel);
+            VSstack.Children.Add(frameLB);
+           
 
             var frame = new Frame
             {

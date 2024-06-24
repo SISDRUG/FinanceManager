@@ -84,6 +84,14 @@
               "target": "Package",
               "version": "[4.0.1, )"
             },
+            "PDFsharp": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "Syncfusion.Pdf.NET": {
+              "target": "Package",
+              "version": "[26.1.38, )"
+            },
             "sqlite-net-pcl": {
               "target": "Package",
               "version": "[1.9.172, )"
@@ -147,6 +155,14 @@
               "target": "Package",
               "version": "[4.0.1, )"
             },
+            "PDFsharp": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "Syncfusion.Pdf.NET": {
+              "target": "Package",
+              "version": "[26.1.38, )"
+            },
             "sqlite-net-pcl": {
               "target": "Package",
               "version": "[1.9.172, )"
@@ -209,6 +225,14 @@
             "Newtonsoft.Json.Schema": {
               "target": "Package",
               "version": "[4.0.1, )"
+            },
+            "PDFsharp": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "Syncfusion.Pdf.NET": {
+              "target": "Package",
+              "version": "[26.1.38, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",

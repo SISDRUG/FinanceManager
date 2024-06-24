@@ -23,7 +23,7 @@ namespace FinanceManager
         public string Operation { get; set; }
         public string Type { get; set; }
         public string Description { get; set; }
-        public Single Value { get; set; }
+        public Double Value { get; set; }
         public DateTime date { get; set; }
     }
 
