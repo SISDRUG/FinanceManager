@@ -51,6 +51,7 @@
                 TextChanged="ValueEntry_TextChanged"
                 Placeholder="Введите сумму"
                 HorizontalOptions="Center"
+                TextColor="WhiteSmoke"
                 HorizontalTextAlignment="Center"
                 WidthRequest="300"
                 />

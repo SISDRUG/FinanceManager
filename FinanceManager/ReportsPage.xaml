@@ -65,7 +65,7 @@
 
                 <Label Margin="5"
                        HorizontalOptions="Center"
-                       Text="Total for all accounts:"/>
+                       Text="Сумма: "/>
 
                 <Label Margin="5"
                        HorizontalOptions="Center"
@@ -77,7 +77,7 @@
 
             <Label Margin="10"
                    HorizontalOptions="Center"
-                   Text="Operations"/>
+                   Text="Операции"/>
             <Frame HeightRequest="500" BorderColor="DarkRed">
                 <Frame.Content>
                     <ScrollView HeightRequest="500">

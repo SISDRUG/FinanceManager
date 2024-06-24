@@ -46,12 +46,9 @@ public partial class TakeOperationFromMainPage : ContentPage
         AccountImage.Source = accounts[0].Source;
         foreach (var account in accounts)
         {
-            if (account.Name == "Базовый")
-            {
-                i++;
-            }
-            accountPickerList.Add(account.Name + i);
-            _accountDictionary.Add(account.Name + i, account.ID);
+
+            accountPickerList.Add(account.Name);
+            _accountDictionary.Add(account.Name, account.ID);
         }
         AccountPicker.ItemsSource = accountPickerList;
         AccountPicker.SelectedIndex = 0;

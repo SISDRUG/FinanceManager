@@ -12,6 +12,10 @@
 		<data>
 		DQgcfQUTJuh7nBKCGldy66zo/Jc=
 		</data>
+		<key>Resources/Images/arrows.png</key>
+		<data>
+		iu14XBZHi2aB2QJANED0KYVWU20=
+		</data>
 		<key>Resources/Images/card.png</key>
 		<data>
 		mbqMyytDAUtT6kY3hJkb6VUdIj4=
@@ -48,6 +52,10 @@
 		<data>
 		/HdjMhxdxHvpxdIHiOBKmeFUvPI=
 		</data>
+		<key>Resources/arrows.png</key>
+		<data>
+		iu14XBZHi2aB2QJANED0KYVWU20=
+		</data>
 		<key>Resources/card.png</key>
 		<data>
 		mbqMyytDAUtT6kY3hJkb6VUdIj4=
@@ -83,14 +91,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5jAs8Mpuc4CCwgsZR2fKn0jgzXrTHu2qEeGg1qdxzdQ=
+			38s2ItxKMfyilE+bUPz2I+Q8qtfruvbGWIk3veKxm8U=
 			</data>
 		</dict>
 		<key>MonoBundle/FinanceManager.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			P7F6IIYTX3yv0hM5hSzKZI+q7J11OQBGzNzmpYHnfbA=
+			p1WC84MQ45z2kJ8rVfA+ecc+dMuW6dtidxZYvApRjBY=
 			</data>
 		</dict>
 		<key>MonoBundle/Microsoft.CSharp.dll</key>
@@ -1745,6 +1753,13 @@
 			BFSl1Lcfc9qmE6X4XXn0NcVP7ojeZpx9Faoz4caNgSw=
 			</data>
 		</dict>
+		<key>Resources/Images/arrows.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1Dq81FaL3Xz8upgAM/sQyV9Hi126x/hV3IuJNWr8b9g=
+			</data>
+		</dict>
 		<key>Resources/Images/card.png</key>
 		<dict>
 			<key>hash2</key>
@@ -1806,6 +1821,13 @@
 			<key>hash2</key>
 			<data>
 			B4VwT3zfcgdsDxFVPoeT0u8ZDRIn76BZ1a908PFzv68=
+			</data>
+		</dict>
+		<key>Resources/arrows.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1Dq81FaL3Xz8upgAM/sQyV9Hi126x/hV3IuJNWr8b9g=
 			</data>
 		</dict>
 		<key>Resources/card.png</key>
