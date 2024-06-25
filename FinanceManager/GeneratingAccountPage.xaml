@@ -7,11 +7,11 @@
         <Image x:Name="TypeImage" Source="card.png" WidthRequest="200" HeightRequest="200"/>
 
         <Label Text="Введите имя счета" TextTransform="Uppercase" FontAttributes="Bold" FontSize="16" HorizontalOptions="Center" Margin="10"/>
-        <Entry x:Name="NameEntry" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" WidthRequest="300" Background="DarkRed"/>
+        <Entry x:Name="NameEntry" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" WidthRequest="300" Background="#009999"/>
 
         <Label Text="Выберите тип счета" TextTransform="Uppercase" FontAttributes="Bold" FontSize="16" HorizontalOptions="Center" VerticalOptions="Center" Margin="10"/>
 
-        <Picker x:Name="TypePicker" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" SelectedIndexChanged="TypePicker_SelectedIndexChanged" Background="DarkRed" WidthRequest="300">
+        <Picker x:Name="TypePicker" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" SelectedIndexChanged="TypePicker_SelectedIndexChanged" Background="#009999" WidthRequest="300">
             <Picker.ItemsSource>
                 <x:Array x:Name="TypeArray" Type="{x:Type x:String}">
                     <x:String>DebitCard</x:String>
@@ -21,7 +21,7 @@
             </Picker.ItemsSource>
         </Picker>
         <Label Text="Начальное значение" TextTransform="Uppercase" FontAttributes="Bold" FontSize="16" HorizontalOptions="Center" VerticalOptions="Center" Margin="10"/>
-        <Entry x:Name="StartValueEntry" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" TextChanged="StartValueEntry_TextChanged" Background="DarkRed" WidthRequest="300"/>
+        <Entry x:Name="StartValueEntry" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" TextChanged="StartValueEntry_TextChanged" Background="#009999" WidthRequest="300"/>
         <Label Text="Выберите дату" TextTransform="Uppercase" FontAttributes="Bold" FontSize="16" HorizontalOptions="Center" VerticalOptions="Center" Margin="10"/>
         <DatePicker x:Name="DatePiker" FontAutoScalingEnabled="True" HorizontalOptions="Center" />
 
@@ -37,7 +37,7 @@
                 FontSize="16"
                 />
 
-            <Frame MaximumHeightRequest="100">
+            <Frame MaximumHeightRequest="100" BorderColor="#009999">
                 <Frame.Content>
                         <Editor x:Name="DescriptionEditor" Placeholder="Введите описание" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" MinimumHeightRequest="30" AutoSize="TextChanges"/>
                 </Frame.Content>

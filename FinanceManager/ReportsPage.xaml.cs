@@ -219,7 +219,7 @@ public partial class ReportsPage : ContentPage
                                         stackLayout.Children.Add(HStack);
                                         var frame = new Frame
                                         {
-                                            BorderColor = Colors.DarkRed,
+                                            BorderColor = Color.FromHex("#009999"),
                                             Content = stackLayout,
                                             WidthRequest = 300,
                                             Margin = new Thickness(0, 10, 0, 10),

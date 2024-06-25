@@ -29,9 +29,9 @@ public partial class CardAccountPage : ContentPage
         //    Padding = 10,
         //    HeightRequest = 100,
         //    Margin = new Thickness(70,0,0,20),
-    //};
+        //};
 
-    //    Image cardImg = new Image { Source = account.Source, HeightRequest = 100};
+        //    Image cardImg = new Image { Source = account.Source, HeightRequest = 100};
 
         //currentStackLayout.Children.Add(cardImg);
         ////currentFrame.Content.InsertLogicalChild(1,accountIDLabel);
@@ -103,7 +103,7 @@ public partial class CardAccountPage : ContentPage
             Button deletButton = new Button
             {
                 Text = "Удалить операцию",
-                Background = Brush.DarkRed,
+                Background = Colors.DarkRed,
                 TextColor = Colors.WhiteSmoke,
                 Margin = new Thickness(10),
             };
@@ -139,7 +139,7 @@ public partial class CardAccountPage : ContentPage
 
             var frame = new Frame
             {
-                BorderColor = Colors.DarkRed,
+                BorderColor = Color.FromHex("#009999"),
                 Content = stackLayout,
                 WidthRequest = 400,
                 Margin = new Thickness(0, 10, 0, 10),

@@ -69,8 +69,8 @@ public partial class AccountsPage : ContentPage
 
             var frameLB = new Frame
             {
-                BorderColor = Colors.DarkRed,
-                BackgroundColor = Colors.DarkRed,
+                BorderColor = Color.FromRgb(80,80,80),
+                BackgroundColor = Color.FromRgb(80, 80, 80),
                 CornerRadius = 10,
                 MaximumWidthRequest = 200,
                 HeightRequest = 60,
@@ -83,7 +83,7 @@ public partial class AccountsPage : ContentPage
 
             var frame = new Frame
             {
-                BorderColor = Colors.DarkRed,
+                BorderColor = Color.FromHex("#009999"),
                 CornerRadius = 10,
                 Padding = 10,
                 HeightRequest = 200,
@@ -146,7 +146,7 @@ public partial class AccountsPage : ContentPage
 
     private async void AddButton_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new GeneratingAccountPage() { Title = "New Account"});
+        await Navigation.PushAsync(new GeneratingAccountPage() { Title = "Новый счет"});
     }
 
 

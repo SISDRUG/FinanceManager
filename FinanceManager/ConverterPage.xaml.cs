@@ -178,8 +178,8 @@ public partial class ConverterPage : ContentPage
             CurLabelFirst.Text = FirstPicker.SelectedItem?.ToString();
             string fromCurrency = FirstPicker.SelectedItem?.ToString();
             string toCurrency = SecondPicker.SelectedItem?.ToString();
-            string curTo = ((_exchangeRates[fromCurrency]) / (_exchangeRates[toCurrency] / _exchangeScale[toCurrency])).ToString("F2");
-            string curFrom = ((_exchangeRates[toCurrency]) / (_exchangeRates[fromCurrency] / _exchangeScale[fromCurrency])).ToString("F2");
+            string curTo = ((_exchangeRates[fromCurrency]) / (_exchangeRates[toCurrency] / _exchangeScale[toCurrency])).ToString("F4");
+            string curFrom = ((_exchangeRates[toCurrency]) / (_exchangeRates[fromCurrency] / _exchangeScale[fromCurrency])).ToString("F4");
             CurLabelTo.Text = curTo;
             //CurLabelTo.Text = _exchangeScale[fromCurrency] + fromCurrency + " -- " + curTo + " -> " + toCurrency;
             //CurLabelFrom.Text = fromCurrency + " <- " + curFrom + " -- " + _exchangeScale[toCurrency] + toCurrency;

@@ -8,7 +8,7 @@
         <HorizontalStackLayout Margin="40" HorizontalOptions="Center">
             <Label x:Name="DayLabel" Text="Load" FontSize="20" HorizontalOptions="Center"/>
         </HorizontalStackLayout>
-        <Frame HeightRequest="600" BorderColor="DarkRed" WidthRequest="350" VerticalOptions="Center" HorizontalOptions="Center">
+        <Frame HeightRequest="600" BorderColor="#009999" WidthRequest="350" VerticalOptions="Center" HorizontalOptions="Center">
             <Frame.Content>
                 <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
                 
@@ -16,7 +16,7 @@
 
                         <Label Text="Первая валюта конвертации" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,10"/>
 
-                        <Picker x:Name="FirstPicker" Background="DarkRed" WidthRequest="200" TextColor="WhiteSmoke" SelectedIndexChanged="FirstPicker_SelectedIndexChanged" >
+                        <Picker x:Name="FirstPicker" Background="#009999" WidthRequest="200" TextColor="WhiteSmoke" SelectedIndexChanged="FirstPicker_SelectedIndexChanged" >
                                 <Picker.ItemsSource>
                                     <x:Array x:Name="AbbreviationArray" Type="{x:Type x:String}">
                                       <!--<x:String>BYN</x:String>
@@ -31,7 +31,7 @@
 
                         <Label Text="Вторая валюта конвертации" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,10"/>
 
-                        <Picker x:Name="SecondPicker" Background="DarkRed" TextColor="WhiteSmoke" SelectedIndexChanged="SecondPicker_SelectedIndexChanged" WidthRequest="200">
+                        <Picker x:Name="SecondPicker" Background="#009999" TextColor="WhiteSmoke" SelectedIndexChanged="SecondPicker_SelectedIndexChanged" WidthRequest="200">
                                 <Picker.ItemsSource>
                                     <x:Array Type="{x:Type x:String}">
                                       <!--<x:String>BYN</x:String>
@@ -50,7 +50,7 @@
 
                                 <Label x:Name="CurLabelFirst" Text="BYN" HorizontalOptions="Start"/>
  
-                                <Entry x:Name="FirstEntry" Background="DarkRed" TextColor="WhiteSmoke" WidthRequest="200" TextChanged= "FirstEntry_TextChanged"  />
+                                <Entry x:Name="FirstEntry" Background="#009999" TextColor="WhiteSmoke" WidthRequest="200" TextChanged= "FirstEntry_TextChanged"  />
                                 <HorizontalStackLayout>
                                     <VerticalStackLayout WidthRequest="60" VerticalOptions="Center">
                                         <Label x:Name="CurLabelTo" Text="1" HorizontalOptions="End"/>
@@ -65,7 +65,7 @@
 
                                 <Label x:Name="CurLabelSecond" Text="USD" Margin="0,-10,0,0" HorizontalOptions="Start"/>
 
-                                <Entry x:Name="SecondEntry" Background="DarkRed" TextColor="WhiteSmoke" WidthRequest="200" TextChanged= "SecondEntry_TextChanged"/>
+                                <Entry x:Name="SecondEntry" Background="#009999" TextColor="WhiteSmoke" WidthRequest="200" TextChanged= "SecondEntry_TextChanged"/>
                             </VerticalStackLayout>
                         </Frame.Content>
                     </Frame>

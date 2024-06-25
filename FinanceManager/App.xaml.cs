@@ -17,7 +17,7 @@ public partial class App : Application
         
         InitializeComponent();
 
-        MainPage = new NavigationPage(new MyTabbedPage() {SelectedTabColor = Colors.DarkRed , Title = "FinanceManager" }); 
+        MainPage = new NavigationPage(new MyTabbedPage() {SelectedTabColor = Color.FromHex("#009999"), Title = "FinanceManager" }); 
     }
 
 

@@ -2,13 +2,13 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinanceManager.CardAccountSettingPage"
-             Title="CardAccountSetting">
+             Title="Настройки">
     <VerticalStackLayout VerticalOptions="Center" Margin="0,-150,0,0">
         <Label x:Name="IdLabel" IsVisible="false"/>
         <Image x:Name="CardImage" HeightRequest="300" Source="card.png"/>
         <HorizontalStackLayout HorizontalOptions="Center">
             <Label Text="Имя счета" FontSize="22" VerticalOptions="Center"/>
-            <Entry x:Name="EntryAccountName" WidthRequest="150" Margin="10,0" TextColor="WhiteSmoke" BackgroundColor="DarkRed" Text="" />
+            <Entry x:Name="EntryAccountName" WidthRequest="150" Margin="10,0" TextColor="WhiteSmoke" BackgroundColor="#009999" Text="" />
         </HorizontalStackLayout>
 
         <HorizontalStackLayout HorizontalOptions="Center" Margin="20">

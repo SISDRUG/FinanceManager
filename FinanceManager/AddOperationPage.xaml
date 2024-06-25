@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinanceManager.AddOperationPage"
-             Title="AddOperationPage">
+             Title="Новое зачисление">
     <VerticalStackLayout HorizontalOptions="Center" Margin="20">
 
             <Image x:Name="AccountImage"
@@ -32,7 +32,7 @@
                 />
 
             <Entry
-                Background="DarkRed"
+                Background="#009999"
                 x:Name="ValueEntry"
                 TextChanged="ValueEntry_TextChanged"
                 Placeholder="Введите сумму"
@@ -61,7 +61,7 @@
                     Margin="0,5,0,5"
                     WidthRequest="300"
                     HorizontalOptions="Center"
-                    Background="DarkRed"
+                    Background="#009999"
                     TextColor="WhiteSmoke"
                     HorizontalTextAlignment="Center">
                 <Picker.ItemsSource>
@@ -94,7 +94,7 @@
                 FontSize="16"
                 />
 
-            <Frame MaximumHeightRequest="150" BorderColor="DarkRed">
+            <Frame MaximumHeightRequest="150" BorderColor="#009999">
                 <Frame.Content>
                         <Editor x:Name="DescriptionEditor" Placeholder="Введите описание" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" MinimumHeightRequest="30" AutoSize="TextChanges"/>
                 </Frame.Content>

@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinanceManager.AboutOperationPage"
-             Title="AboutOperationPage">
+             Title="Информация о операции">
     <VerticalStackLayout Margin="5,5" HorizontalOptions="Center">
         <Label x:Name="DataLabel" Text="Data" FontSize="20" HorizontalOptions="Center" Margin="0,5,0,5"/>
         <Label x:Name="TimeLabel" Text="Time" FontSize="16" HorizontalOptions="Center" Margin="0,5"/>
@@ -13,7 +13,7 @@
                 <Label x:Name="TypeLabel" Text="Type" FontSize="18"/>
         </HorizontalStackLayout>
         <HorizontalStackLayout HorizontalOptions="Center" Margin="0,10">
-            <Frame BorderColor="DarkRed">
+            <Frame BorderColor="#009999">
                 <Frame.Content>
                     <Label x:Name="ValueLabel" Text="Ammount" FontSize="16"/>
                 </Frame.Content>
@@ -22,7 +22,7 @@
         <VerticalStackLayout>
             <Label Text="Описание" HorizontalOptions="Center" FontSize="18" Margin="0,5,0,5" />
 
-            <Frame BorderColor="red" MaximumHeightRequest="300">
+            <Frame BorderColor="#009999" MaximumHeightRequest="300">
                 <Frame.Content>
                     <ScrollView>
                         <Label x:Name="DescriptionLabel" Text="dsfdsfsdfdsfs" HorizontalOptions="Center" FontSize="20" Padding="10" />

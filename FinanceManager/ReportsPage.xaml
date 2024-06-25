@@ -5,7 +5,7 @@
              Title="ReportsPage">
 
     <VerticalStackLayout x:Name="MainStack">
-            <ActivityIndicator x:Name="Indicator" Color="DarkRed" IsVisible="false" Scale="4" ZIndex="2" WidthRequest="400" HeightRequest="800" IsRunning="False"/>
+            <ActivityIndicator x:Name="Indicator" Color="#009999" IsVisible="false" Scale="4" ZIndex="2" WidthRequest="400" HeightRequest="800" IsRunning="False"/>
 
         <VerticalStackLayout HorizontalOptions="Center">
 
@@ -19,7 +19,7 @@
                         WidthRequest="100"
                         Margin="10,0"
                         HorizontalOptions="End"
-                        Background="DarkRed"
+                        Background="#009999"
                         TextColor="WhiteSmoke"
                         HorizontalTextAlignment="Center"
                         SelectedIndexChanged="AccountPicker_SelectedIndexChanged">
@@ -35,7 +35,7 @@
                         Margin="10,0"
                         WidthRequest="100"
                         HorizontalOptions="End"
-                        Background="DarkRed"
+                        Background="#009999"
                         TextColor="WhiteSmoke"
                         HorizontalTextAlignment="Center"
                         SelectedIndexChanged="OperationTypePicker_SelectedIndexChanged">
@@ -60,7 +60,7 @@
                     <Entry  x:Name="SearchEntry"
                             Placeholder="Слово"
                             WidthRequest="100"
-                            Background="DarkRed"
+                            Background="#009999"
                             TextColor="WhiteSmoke"
                             Margin="10,0,40,0"
                             TextChanged="SearchEntry_TextChanged"
@@ -70,7 +70,7 @@
                     <Picker x:Name="OperationPicker"
                         Margin="10,0,0,0"
                         WidthRequest="100"
-                        Background="DarkRed"
+                        Background="#009999"
                         TextColor="WhiteSmoke"
                         HorizontalTextAlignment="Center"
                         SelectedIndexChanged="OperationPicker_SelectedIndexChanged">
@@ -86,7 +86,7 @@
 
             </VerticalStackLayout>
 
-            <Frame BorderColor="DarkRed" HeightRequest="100"  Margin="0,10">
+            <Frame BorderColor="#009999" HeightRequest="100"  Margin="0,10">
                 <Frame.Content>
                     <VerticalStackLayout>
                         <HorizontalStackLayout HorizontalOptions="Center">
@@ -102,7 +102,7 @@
                                             Placeholder="-∞"
                                             Margin="5,5,0,5"
                                             WidthRequest="100"
-                                            Background="DarkRed"
+                                            Background="#009999"
                                             TextColor="WhiteSmoke"
                                             TextChanged="MinValueEntry_TextChanged"
                                             HorizontalTextAlignment="Center"/>
@@ -114,7 +114,7 @@
                                             Margin="5,5,0,5"
                                             Placeholder="+∞"
                                             WidthRequest="100"
-                                            Background="DarkRed"
+                                            Background="#009999"
                                             TextColor="WhiteSmoke"
                                             TextChanged="MaxValueEntry_TextChanged"
                                             HorizontalTextAlignment="Center"/>
@@ -132,7 +132,7 @@
                              Clicked="PDFbutton_Clicked"
                             Margin="5,5,0,5"
                             WidthRequest="100"
-                            Background="DarkRed"
+                            Background="#009999"
                             TextColor="WhiteSmoke"/>
 
             </VerticalStackLayout>
@@ -142,7 +142,7 @@
     </VerticalStackLayout>
 
         <VerticalStackLayout>
-        <Frame MaximumWidthRequest="300" BorderColor="DarkRed" HorizontalOptions="Center">
+        <Frame MaximumWidthRequest="300" BorderColor="#009999" HorizontalOptions="Center">
                 <Frame.Content>
                     <HorizontalStackLayout HorizontalOptions="Center">
 
@@ -164,7 +164,7 @@
             <Label Margin="10"
                    HorizontalOptions="Center"
                    Text="Операции"/>
-            <Frame HeightRequest="300" BorderColor="DarkRed">
+            <Frame HeightRequest="300" BorderColor="#009999">
                 <Frame.Content>
                     <ScrollView HeightRequest="300">
                 

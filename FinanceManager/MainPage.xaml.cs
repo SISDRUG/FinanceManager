@@ -143,7 +143,7 @@ public partial class MainPage : ContentPage
                     stackLayout.Children.Add(secondVertStack);
 
                     var frame = new Frame {
-                        BorderColor = Colors.DarkRed,
+                        BorderColor = Color.FromHex("#009999"),
                         Content = stackLayout,
                         WidthRequest = 350,
                         Margin = new Thickness(0, 10, 0, 10),
