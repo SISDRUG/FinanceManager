@@ -5,7 +5,7 @@
              Title="MainPage">
     <VerticalStackLayout Margin="0">
         <HorizontalStackLayout Margin="0,30,0,0" Padding="0" HorizontalOptions="Center">
-            <Label Text="Транзакции за сегодня" HorizontalOptions="Center" FontSize="25"/>
+            <Label Text="Транзакции за сегодня" HorizontalOptions="Center"  FontSize="25"/>
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="0,10" Padding="0" HorizontalOptions="Center">
             <Label x:Name="DataLabel" Text="Дата на сегодня" HorizontalOptions="Center" FontSize="17"/>
@@ -13,16 +13,16 @@
         <HorizontalStackLayout HorizontalOptions="Center">
 
             <VerticalStackLayout x:Name="VStackIncome"  VerticalOptions="End" WidthRequest="140">
-            <Label x:Name="IncomeLabel" Text="Income" HorizontalOptions="Start" TextColor="Green" FontSize="16"/>
+            <Label x:Name="IncomeLabel" Text="Income" HorizontalOptions="Start" LineBreakMode="MiddleTruncation" MaximumWidthRequest="170" TextColor="Green" FontSize="16"/>
             </VerticalStackLayout>
             
             <VerticalStackLayout x:Name="VStackTotal" WidthRequest="100" Margin="0,20,0,40">
-            <Label x:Name="TotalLabel" Text="Total" HorizontalOptions="Center"  TextColor="Green" FontSize="24"/>
+            <Label x:Name="TotalLabel" Text="Total" HorizontalOptions="Center" MaximumWidthRequest="400" LineBreakMode="MiddleTruncation"  TextColor="Green" FontSize="24"/>
             </VerticalStackLayout>
 
 
             <VerticalStackLayout x:Name="VStackOutcome" VerticalOptions="End" WidthRequest="140">
-            <Label x:Name="OutcomeLabel" Text="OutCome" HorizontalOptions="End" TextColor="Red" FontSize="16"/>
+            <Label x:Name="OutcomeLabel" Text="OutCome" MaximumWidthRequest="170" LineBreakMode="MiddleTruncation" HorizontalOptions="End" TextColor="Red" FontSize="16"/>
             </VerticalStackLayout>
 
         </HorizontalStackLayout>

@@ -88,6 +88,10 @@
               "target": "Package",
               "version": "[6.1.0, )"
             },
+            "PlantUml.Net": {
+              "target": "Package",
+              "version": "[1.4.80, )"
+            },
             "Syncfusion.Pdf.NET": {
               "target": "Package",
               "version": "[26.1.38, )"
@@ -159,6 +163,10 @@
               "target": "Package",
               "version": "[6.1.0, )"
             },
+            "PlantUml.Net": {
+              "target": "Package",
+              "version": "[1.4.80, )"
+            },
             "Syncfusion.Pdf.NET": {
               "target": "Package",
               "version": "[26.1.38, )"
@@ -229,6 +237,10 @@
             "PDFsharp": {
               "target": "Package",
               "version": "[6.1.0, )"
+            },
+            "PlantUml.Net": {
+              "target": "Package",
+              "version": "[1.4.80, )"
             },
             "Syncfusion.Pdf.NET": {
               "target": "Package",

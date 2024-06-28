@@ -33,16 +33,29 @@ public partial class ConverterPage : ContentPage
     private bool _secondEntryFlag = false;
     private bool _firstPickerFlag = false;
     private bool _secondPickerFlag = false;
-
+    private HttpResponseMessage _response;
 
     public ConverterPage()
     {
         InitializeComponent();
         SecondEntry.TextColor = Colors.WhiteSmoke;
-        GetExchangeRatesAsync();
         DayLabel.Text = DateTime.Now.ToLongDateString();
     }
 
+
+    protected override void OnAppearing()
+    {
+        this.RefreshIsEnabledProperty();
+        base.OnAppearing();
+        // Ваш код для обновления данных или логики
+        if (_response == null)
+        {
+            RootStack.IsVisible = false;
+            LabelLossConection.IsVisible = true;
+            GetExchangeRatesAsync();
+        }
+            
+    }
 
     private static readonly HttpClient client = new HttpClient();
 
@@ -50,33 +63,42 @@ public partial class ConverterPage : ContentPage
     {
         _firstPickerFlag = true;
         _secondPickerFlag = true;
-        using var client = new HttpClient();
-        var response = await client.GetAsync("https://api.nbrb.by/exrates/rates?periodicity=0");
-        if (response.IsSuccessStatusCode)
-        {
-            var content = await response.Content.ReadAsStringAsync();
-            Cur =  Newtonsoft.Json.JsonConvert.DeserializeObject<List<Rate>>(content);
-            foreach (var cur in Cur)
+        try { 
+            using var client = new HttpClient();
+
+            _response = await client.GetAsync("https://api.nbrb.by/exrates/rates?periodicity=0");
+            if (_response.IsSuccessStatusCode)
             {
-                _exchangeRates.Add(cur.Cur_Abbreviation,cur.Cur_OfficialRate);
-                _exchangeScale.Add(cur.Cur_Abbreviation, cur.Cur_Scale);
+                var content = await _response.Content.ReadAsStringAsync();
+                Cur = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Rate>>(content);
+                foreach (var cur in Cur)
+                {
+                    _exchangeRates.Add(cur.Cur_Abbreviation, cur.Cur_OfficialRate);
+                    _exchangeScale.Add(cur.Cur_Abbreviation, cur.Cur_Scale);
+                }
+                FirstPicker.ItemsSource = _exchangeRates.Keys.ToArray();
+                FirstPicker.SelectedIndex = 0;
+                SecondPicker.ItemsSource = _exchangeRates.Keys.ToArray();
+                SecondPicker.SelectedIndex = 8;
+                RootStack.IsVisible = true;
+                LabelLossConection.IsVisible = false;
+                _secondPickerFlag = false;
+                FirstPicker_SelectedIndexChanged(FirstPicker,EventArgs.Empty);
             }
-            FirstPicker.ItemsSource = _exchangeRates.Keys.ToArray();
-            FirstPicker.SelectedIndex = 0;
-            SecondPicker.ItemsSource = _exchangeRates.Keys.ToArray();
-            SecondPicker.SelectedIndex = 8;
-            //AbbreviationArray = _newExchangeRates.Keys.ToArray();
-            //AbbreviationArray.SetValue(dff[0].Cur_Abbreviation,AbbreviationArray.Length);
+            else
+            {
+                Console.WriteLine($"Error: {_response.StatusCode}");
 
+            }
         }
-        else
+        catch (Exception ex)
         {
-            Console.WriteLine($"Error: {response.StatusCode}");
 
         }
+
         _firstPickerFlag = false;
         _secondPickerFlag = false;
-        FirstPicker_SelectedIndexChanged(FirstPicker,EventArgs.Empty);
+
     }
 
 

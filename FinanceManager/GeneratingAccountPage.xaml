@@ -14,9 +14,9 @@
         <Picker x:Name="TypePicker" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" SelectedIndexChanged="TypePicker_SelectedIndexChanged" Background="#009999" WidthRequest="300">
             <Picker.ItemsSource>
                 <x:Array x:Name="TypeArray" Type="{x:Type x:String}">
-                    <x:String>DebitCard</x:String>
-                    <x:String>Cash</x:String>
-                    <x:String>CreditCard</x:String>
+                    <x:String>Дебетовая карта</x:String>
+                    <x:String>Наличка</x:String>
+                    <x:String>Кредитная карта</x:String>
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>

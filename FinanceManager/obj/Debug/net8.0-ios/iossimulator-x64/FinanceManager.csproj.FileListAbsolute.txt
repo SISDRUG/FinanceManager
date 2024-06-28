@@ -340,6 +340,7 @@
 /Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/obj/Debug/net8.0-ios/iossimulator-x64/FinanceManager.pdb
 /Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/obj/Debug/net8.0-ios/iossimulator-x64/FinanceManager.genruntimeconfig.cache
 /Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/obj/Debug/net8.0-ios/iossimulator-x64/ref/FinanceManager.dll
+/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/bin/Debug/net8.0-ios/iossimulator-x64/PlantUml.Net.dll
 /Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/obj/Debug/net8.0-ios/iossimulator-x64/resourcestamps/Microsoft.CSharp.stamp
 /Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/obj/Debug/net8.0-ios/iossimulator-x64/resourcestamps/Microsoft.Extensions.Configuration.Abstractions.stamp
 /Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/obj/Debug/net8.0-ios/iossimulator-x64/resourcestamps/Microsoft.Extensions.Configuration.stamp
@@ -377,6 +378,7 @@
 /Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/obj/Debug/net8.0-ios/iossimulator-x64/resourcestamps/PdfSharp.Snippets.stamp
 /Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/obj/Debug/net8.0-ios/iossimulator-x64/resourcestamps/PdfSharp.System.stamp
 /Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/obj/Debug/net8.0-ios/iossimulator-x64/resourcestamps/PdfSharp.WPFonts.stamp
+/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/obj/Debug/net8.0-ios/iossimulator-x64/resourcestamps/PlantUml.Net.stamp
 /Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/obj/Debug/net8.0-ios/iossimulator-x64/resourcestamps/SQLite-net.stamp
 /Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/obj/Debug/net8.0-ios/iossimulator-x64/resourcestamps/SQLitePCLRaw.batteries_v2.stamp
 /Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/obj/Debug/net8.0-ios/iossimulator-x64/resourcestamps/SQLitePCLRaw.core.stamp

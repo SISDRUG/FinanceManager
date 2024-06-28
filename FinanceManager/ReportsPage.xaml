@@ -127,13 +127,7 @@
             </Frame>
         <HorizontalStackLayout HorizontalOptions="Center">
             <VerticalStackLayout>
-                    <Button  x:Name="PDFbutton"
-                             Text="PDF"
-                             Clicked="PDFbutton_Clicked"
-                            Margin="5,5,0,5"
-                            WidthRequest="100"
-                            Background="#009999"
-                            TextColor="WhiteSmoke"/>
+                    
 
             </VerticalStackLayout>
 
@@ -164,9 +158,9 @@
             <Label Margin="10"
                    HorizontalOptions="Center"
                    Text="Операции"/>
-            <Frame HeightRequest="300" BorderColor="#009999">
+            <Frame HeightRequest="400" BorderColor="#009999">
                 <Frame.Content>
-                    <ScrollView HeightRequest="300">
+                    <ScrollView HeightRequest="400">
                 
                         <VerticalStackLayout x:Name="operationsStack"/>
                 

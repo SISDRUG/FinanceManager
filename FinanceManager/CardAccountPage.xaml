@@ -22,6 +22,8 @@
                             <Label x:Name="accounValueLabel"
                                    HorizontalOptions="Center"
                                    VerticalOptions="Center"
+                                   MaximumWidthRequest="150"
+                                   LineBreakMode="TailTruncation"
                                    Margin="10,0"
                                    TextColor="WhiteSmoke" FontSize="18"/>
                         </Frame.Content>

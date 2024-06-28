@@ -75,6 +75,21 @@ namespace FinanceManager
             return tt;
         }
 
+        public async Task<Double> GetMinValueStatsAsync()
+        {
+            //var stocksStartingWithA = db.Query<Stock>("SELECT * FROM Items WHERE Symbol = ?", "A");
+            //var minValue = await _database.QueryAsync<AccountStats>("Select * From AccountStats");
+            var minAccountStats = (await _database.QueryAsync<AccountStats>("SELECT * FROM AccountStats ORDER BY Value ASC LIMIT 1")).FirstOrDefault();
+            return minAccountStats?.Value ?? 0;
+
+        }
+
+        public async Task<Double> GetMaxValueStatsAsync()
+        {
+            var maxAccountStats = (await _database.QueryAsync<AccountStats>("SELECT * FROM AccountStats ORDER BY Value DESC LIMIT 1")).FirstOrDefault();
+            return maxAccountStats?.Value ?? 0;
+        }
+
         public async Task<bool> GetShowLoginPageAsync()
         {
             var settings = await _database.Table<AppSettings>().FirstOrDefaultAsync();

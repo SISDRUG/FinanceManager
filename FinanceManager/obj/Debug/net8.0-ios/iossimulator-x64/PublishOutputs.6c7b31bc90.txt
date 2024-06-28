@@ -65,6 +65,7 @@
 /Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/bin/Debug/net8.0-ios/iossimulator-x64/publish/../FinanceManager.app/PdfSharp.System.dll
 /Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/bin/Debug/net8.0-ios/iossimulator-x64/publish/../FinanceManager.app/PdfSharp.WPFonts.dll
 /Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/bin/Debug/net8.0-ios/iossimulator-x64/publish/../FinanceManager.app/PdfSharp.dll
+/Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/bin/Debug/net8.0-ios/iossimulator-x64/publish/../FinanceManager.app/PlantUml.Net.dll
 /Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/bin/Debug/net8.0-ios/iossimulator-x64/publish/../FinanceManager.app/SQLite-net.dll
 /Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/bin/Debug/net8.0-ios/iossimulator-x64/publish/../FinanceManager.app/SQLitePCLRaw.batteries_v2.dll
 /Users/sisdrug/Desktop/FinanceManagerRep/FinanceManager/bin/Debug/net8.0-ios/iossimulator-x64/publish/../FinanceManager.app/SQLitePCLRaw.core.dll

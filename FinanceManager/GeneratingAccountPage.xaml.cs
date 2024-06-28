@@ -16,9 +16,9 @@ public partial class GeneratingAccountPage : ContentPage
 
     private Dictionary<string, string> Sources = new Dictionary<string, string>
     {
-        {"DebitCard", "card.png" },
-        {"Cash", "cash.png" },
-        {"CreditCard", "creditcard.png" }
+        {"Дебетовая карта", "card.png" },
+        {"Наличка", "cash.png" },
+        {"Кредитная карта", "creditcard.png" }
     };
 
     public GeneratingAccountPage()
@@ -82,7 +82,7 @@ public partial class GeneratingAccountPage : ContentPage
         await database.SaveItemAsync(account);
         var accounts = await database.GetItemsAsync();
         Single.TryParse(StartValueEntry.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out Single StartValue);
-        var initOperation = new AccountStats { AccountID = accounts[accounts.Count - 1].ID, Operation = "Start Value",Description = DescriptionEditor.Text , Value = StartValue, Type = "income", date = chosedDate };
+        var initOperation = new AccountStats { AccountID = accounts[accounts.Count - 1].ID, Operation = "Стартовое значение",Description = DescriptionEditor.Text , Value = StartValue, Type = "income", date = chosedDate };
         await database.SaveItemAsync(initOperation);
         await Navigation.PopAsync();
     }

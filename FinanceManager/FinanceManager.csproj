@@ -66,6 +66,7 @@
 		<PackageReference Include="Newtonsoft.Json.Schema" Version="4.0.1" />
 		<PackageReference Include="PDFsharp" Version="6.1.0" />
 		<PackageReference Include="Syncfusion.Pdf.NET" Version="26.1.38" />
+		<PackageReference Include="PlantUml.Net" Version="1.4.80" />
 	</ItemGroup>
 
 	<!-- Build Properties must be defined within these property groups to ensure successful publishing

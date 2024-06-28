@@ -3,74 +3,76 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinanceManager.ConverterPage"
              Title="ConverterPage">
-
-    <VerticalStackLayout>
-        <HorizontalStackLayout Margin="40" HorizontalOptions="Center">
-            <Label x:Name="DayLabel" Text="Load" FontSize="20" HorizontalOptions="Center"/>
-        </HorizontalStackLayout>
-        <Frame HeightRequest="600" BorderColor="#009999" WidthRequest="350" VerticalOptions="Center" HorizontalOptions="Center">
-            <Frame.Content>
-                <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+    <VerticalStackLayout x:Name="LabelStack">
+        <Label x:Name="LabelLossConection" HeightRequest="700" IsVisible="false" VerticalTextAlignment="Center" Text="Конвертер не доступен без подключения к интернету" MaximumWidthRequest="350" LineBreakMode="WordWrap" FontSize="28" TextColor="#009999" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+        <VerticalStackLayout x:Name="RootStack" IsVisible="true">
+            <HorizontalStackLayout Margin="40" HorizontalOptions="Center">
+                <Label x:Name="DayLabel" Text="Load" FontSize="20" HorizontalOptions="Center"/>
+            </HorizontalStackLayout>
+            <Frame HeightRequest="600" BorderColor="#009999" WidthRequest="350" VerticalOptions="Center" HorizontalOptions="Center">
+                <Frame.Content>
+                    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
                 
-                        <Label Text="Курс НБРБ" HorizontalOptions="Center" FontSize="26" VerticalOptions="Center" Margin="0,20"/>
+                            <Label Text="Курс НБРБ" HorizontalOptions="Center" FontSize="26" VerticalOptions="Center" Margin="0,20"/>
 
-                        <Label Text="Первая валюта конвертации" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,10"/>
+                            <Label Text="Первая валюта конвертации" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,10"/>
 
-                        <Picker x:Name="FirstPicker" Background="#009999" WidthRequest="200" TextColor="WhiteSmoke" SelectedIndexChanged="FirstPicker_SelectedIndexChanged" >
-                                <Picker.ItemsSource>
-                                    <x:Array x:Name="AbbreviationArray" Type="{x:Type x:String}">
-                                      <!--<x:String>BYN</x:String>
-                                      <x:String>USD</x:String>
-                                      <x:String>RUB</x:String>
-                                      <x:String>EUR</x:String>
-                                      <x:String>PLN</x:String>
-                                      <x:String>CNY</x:String>-->
-                                    </x:Array>
-                                </Picker.ItemsSource>
-                        </Picker>
-
-                        <Label Text="Вторая валюта конвертации" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,10"/>
-
-                        <Picker x:Name="SecondPicker" Background="#009999" TextColor="WhiteSmoke" SelectedIndexChanged="SecondPicker_SelectedIndexChanged" WidthRequest="200">
-                                <Picker.ItemsSource>
-                                    <x:Array Type="{x:Type x:String}">
-                                      <!--<x:String>BYN</x:String>
-                                      <x:String>USD</x:String>
-                                      <x:String>RUB</x:String>
-                                      <x:String>EUR</x:String>
-                                      <x:String>PLN</x:String>
-                                      <x:String>CNY</x:String>-->
-                                    </x:Array>
-                                </Picker.ItemsSource>
+                            <Picker x:Name="FirstPicker" Background="#009999" WidthRequest="200" TextColor="WhiteSmoke" SelectedIndexChanged="FirstPicker_SelectedIndexChanged" >
+                                    <Picker.ItemsSource>
+                                        <x:Array x:Name="AbbreviationArray" Type="{x:Type x:String}">
+                                          <!--<x:String>BYN</x:String>
+                                          <x:String>USD</x:String>
+                                          <x:String>RUB</x:String>
+                                          <x:String>EUR</x:String>
+                                          <x:String>PLN</x:String>
+                                          <x:String>CNY</x:String>-->
+                                        </x:Array>
+                                    </Picker.ItemsSource>
                             </Picker>
 
-                    <Frame Margin="0,30,0,-20">
-                        <Frame.Content>
-                            <VerticalStackLayout>
+                            <Label Text="Вторая валюта конвертации" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,10"/>
 
-                                <Label x:Name="CurLabelFirst" Text="BYN" HorizontalOptions="Start"/>
+                            <Picker x:Name="SecondPicker" Background="#009999" TextColor="WhiteSmoke" SelectedIndexChanged="SecondPicker_SelectedIndexChanged" WidthRequest="200">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                          <!--<x:String>BYN</x:String>
+                                          <x:String>USD</x:String>
+                                          <x:String>RUB</x:String>
+                                          <x:String>EUR</x:String>
+                                          <x:String>PLN</x:String>
+                                          <x:String>CNY</x:String>-->
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
+
+                        <Frame Margin="0,30,0,-20">
+                            <Frame.Content>
+                                <VerticalStackLayout>
+
+                                    <Label x:Name="CurLabelFirst" Text="BYN" HorizontalOptions="Start"/>
  
-                                <Entry x:Name="FirstEntry" Background="#009999" TextColor="WhiteSmoke" WidthRequest="200" TextChanged= "FirstEntry_TextChanged"  />
-                                <HorizontalStackLayout>
-                                    <VerticalStackLayout WidthRequest="60" VerticalOptions="Center">
-                                        <Label x:Name="CurLabelTo" Text="1" HorizontalOptions="End"/>
-                                    </VerticalStackLayout>
-                                    <VerticalStackLayout WidthRequest="80">
-                                        <Image Source="arrows.png" HeightRequest="40" Margin="10"/>
-                                    </VerticalStackLayout>
-                                    <VerticalStackLayout WidthRequest="50" VerticalOptions="Center">
-                                        <Label x:Name="CurLabelFrom" Text="2" HorizontalOptions="Start"/>
-                                    </VerticalStackLayout>
-                                </HorizontalStackLayout>
+                                    <Entry x:Name="FirstEntry" Background="#009999" TextColor="WhiteSmoke" WidthRequest="200" TextChanged= "FirstEntry_TextChanged"  />
+                                    <HorizontalStackLayout>
+                                        <VerticalStackLayout WidthRequest="60" VerticalOptions="Center">
+                                            <Label x:Name="CurLabelTo" Text="1" HorizontalOptions="End"/>
+                                        </VerticalStackLayout>
+                                        <VerticalStackLayout WidthRequest="80">
+                                            <Image Source="arrows.png" HeightRequest="40" Margin="10"/>
+                                        </VerticalStackLayout>
+                                        <VerticalStackLayout WidthRequest="50" VerticalOptions="Center">
+                                            <Label x:Name="CurLabelFrom" Text="2" HorizontalOptions="Start"/>
+                                        </VerticalStackLayout>
+                                    </HorizontalStackLayout>
 
-                                <Label x:Name="CurLabelSecond" Text="USD" Margin="0,-10,0,0" HorizontalOptions="Start"/>
+                                    <Label x:Name="CurLabelSecond" Text="USD" Margin="0,-10,0,0" HorizontalOptions="Start"/>
 
-                                <Entry x:Name="SecondEntry" Background="#009999" TextColor="WhiteSmoke" WidthRequest="200" TextChanged= "SecondEntry_TextChanged"/>
-                            </VerticalStackLayout>
-                        </Frame.Content>
-                    </Frame>
-                </VerticalStackLayout>
-            </Frame.Content>
-        </Frame>
+                                    <Entry x:Name="SecondEntry" Background="#009999" TextColor="WhiteSmoke" WidthRequest="200" TextChanged= "SecondEntry_TextChanged"/>
+                                </VerticalStackLayout>
+                            </Frame.Content>
+                        </Frame>
+                    </VerticalStackLayout>
+                </Frame.Content>
+            </Frame>
+        </VerticalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

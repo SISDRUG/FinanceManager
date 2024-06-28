@@ -25,13 +25,10 @@ public partial class AddOperationPage : ContentPage
     public async void GeneratePickerList()
     {
         var typePickerList = new List<string>();
-        typePickerList.Add("income");
-        typePickerList.Add("payment");
-        typePickerList.Add("products");
-        typePickerList.Add("credit");
-        typePickerList.Add("house");
-        typePickerList.Add("shool");
-        typePickerList.Add("present");
+        typePickerList.Add("Зачисление");
+        typePickerList.Add("Запрлата");
+        typePickerList.Add("Девиденты");
+        typePickerList.Add("Подарок");
 
         PikerType.ItemsSource = typePickerList;
         PikerType.SelectedIndex = 0;
